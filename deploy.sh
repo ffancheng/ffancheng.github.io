@@ -10,7 +10,7 @@
 export LC_TIME=en_US.UTF-8
 
 # The commit message.
-MESSAGE= "$(git log --pretty=format:"%s" -1)"
+MESSAGE= $(git log --pretty=format:"%s" -1)
 
 msg() {
     printf "\033[1;32m :: %s\n\033[0m" "$1"
