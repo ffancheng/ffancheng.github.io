@@ -145,12 +145,12 @@ sharing = true
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  engine = 2
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   [search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
+    app_id = "7DBUCCCLHI"
+    api_key = "7e4194ecf12ac9260b31845c6dd3a669"
+    index_name = "fancheng.me"
     show_logo = false
