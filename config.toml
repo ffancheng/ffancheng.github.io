@@ -19,7 +19,7 @@ copyright = "&copy; {year} Fan Cheng"
 googleAnalytics = "UA-139427263-1"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+# disqusShortname = ""
 
 ############################
 ## Advanced options below ##
@@ -40,6 +40,8 @@ paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+math = true
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
@@ -73,9 +75,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
   # 'custom' is adopted from https://lmyint.github.io/post/hugo-academic-tips/.
   color_theme = "custom"
-  
-  # Some other stuff...
-
   email = "Fan.Cheng@monash.edu"
   address = ""
   office_hours = ""
