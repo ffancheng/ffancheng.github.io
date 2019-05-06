@@ -10,7 +10,7 @@
 export LC_TIME=en_US.UTF-8
 
 # The commit message.
-MESSAGE= $(git log --pretty=format:"%s" -1)
+# MESSAGE= "$(git log --pretty=format:"%s" -1)"
 
 msg() {
     printf "\033[1;32m :: %s\n\033[0m" "$1"
@@ -35,6 +35,6 @@ cp CNAME public/
 msg "Pushing the updated \`public\` folder to the \`master\` branch"
 pushd public
 git add *
-git commit -m "$MESSAGE"
+git commit
 popd
 git push origin master
