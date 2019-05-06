@@ -9,7 +9,7 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "Ph.D. Candidate of Statistics"
+role = "Ph.D. Student in Statistics"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -93,4 +93,4 @@ interests = [
 
 +++
   
-Fan Cheng is a Ph.D. candidate of Statistics in [Monash University](https://monash.edu), supervised by [Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). Her research interests include exploratory data analysis, time series analysis, and statistical computing.
+Fan Cheng is a Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by [Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). Her research interests include exploratory data analysis, time series analysis, and statistical computing.
