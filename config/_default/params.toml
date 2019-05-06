@@ -50,9 +50,10 @@ time_format = "3:04 PM"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "Fan.Cheng@monash.edu "
-phone = ""
-address = "900 Dandenong Rd, Caulfield East VIC 3145, Melbourne, Australia"
+# email = ""
+# phone = ""
+# address = "900 Dandenong Rd, Caulfield East VIC 3145, Melbourne, Australia"
+email_form = 0
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 # office_hours = """Monday 10:00 to 13:00<br>
@@ -63,13 +64,13 @@ address = "900 Dandenong Rd, Caulfield East VIC 3145, Melbourne, Australia"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/fanchengfc"},
+# contact_links = [
+  # {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/fanchengfc"},
   # {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   # {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
-  ]
+  # ]
 
 # Display a map.
 # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -86,11 +87,11 @@ contact_links = [
 #   1: Google Maps
 #   2: OpenStreetMap (Mapnik)
 #   3: OpenStreetMap (Mapbox)
-map = 0
-map_api_key = ""
-latitude = "37.4275"
-longitude = "-122.1697"
-zoom = 15
+# map = 0
+# map_api_key = ""
+# latitude = "37.4275"
+# longitude = "-122.1697"
+# zoom = 15
 
 ############################
 ## Plugins                ##

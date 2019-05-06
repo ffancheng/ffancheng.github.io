@@ -74,12 +74,12 @@ math = true
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
   # 'custom' is adopted from https://lmyint.github.io/post/hugo-academic-tips/.
-  color_theme = "custom"
+  color_theme = "default"
   email = "Fan.Cheng@monash.edu"
   address = ""
   office_hours = ""
   phone = ""
   skype = ""
   telegram = ""
-  twitter = "fanchengfc"
+  twitter = ""
 
