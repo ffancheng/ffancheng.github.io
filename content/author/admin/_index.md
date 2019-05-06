@@ -57,12 +57,17 @@ interests = [
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "Fan.Cheng@monash.edu"  # For a direct email link, use "mailto:test@example.org".
+  link = "mailto:Fan.Cheng@monash.edu"  # For a direct email link, use "mailto:test@example.org".
 
 [[social]]
   icon = "twitter"
   icon_pack = "fab"
   link = "https://twitter.com/fanchengfc"
+  
+[[social]]
+  icon = "linkedin"
+  icon_pack = "fab"
+  link = "https://www.linkedin.com/in/fan-cheng"
 
 # [[social]]
 #   icon = "google-scholar"
@@ -70,17 +75,15 @@ interests = [
 #   link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
 [[social]]
+  icon = "orcid"
+  icon_pack = "ai"
+  link = "https://orcid.org/0000-0003-0009-3262" 
+  
+[[social]]
   icon = "github"
   icon_pack = "fab"
   link = "https://github.com/ffancheng"
   
-[[social]]
-  icon = "orcid"
-  icon_pack = "ai"
-  link = "https://orcid.org/0000-0003-0009-3262"  
-
-
-
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[social]]
