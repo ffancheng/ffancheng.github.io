@@ -1,4 +1,6 @@
 public
+resources
 *.Rproj
 .Rproj.user
-resources
+packrat/lib*/
+.Rprofile
