@@ -45,7 +45,7 @@ interests = [
   year = 2018
 
 [[education.courses]]
-  course = "B.S. in Economics"
+  course = "B.Ec in Statistics" 
   institution = "Central University of Finance and Economics"
   year = 2016
 
