@@ -40,7 +40,7 @@ interests = [
 #  year = 
 
 [[education.courses]]
-  course = "M.S. in Applied Statistics"
+  course = "M. in Applied Statistics"
   institution = "Central University of Finance and Economics"
   year = 2018
 
