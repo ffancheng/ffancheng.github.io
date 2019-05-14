@@ -4,3 +4,5 @@ resources
 .Rproj.user
 packrat/lib*/
 .Rprofile
+*.pem
+*.zip
