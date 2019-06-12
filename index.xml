@@ -7,9 +7,34 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; {year} Fan Cheng</copyright>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://fancheng.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Add Local or Online Files to a Rmarkdown Post</title>
+      <link>https://fancheng.me/2019/06/12/build-website/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fancheng.me/2019/06/12/build-website/</guid>
+      <description>
+
+
+&lt;p&gt;When you want to include a pdf file in your Rmarkdown post, here are the tips for you.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the file is from your online Github repo, you should first get the link for the file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First click the &lt;a href=&#34;https://github.com/ffancheng/CufeBuaaSeminars/blob/master/2018_S1/20180420/20180420_FanCheng_MovingKnots.pdf&#34;&gt;PDF file in your Github repo&lt;/a&gt;. Then right click in the &lt;code&gt;download&lt;/code&gt; button and copy the link by &lt;code&gt;copy link address&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ffancheng/CufeBuaaSeminars/raw/master/2018_S1/20180420/20180420_FanCheng_MovingKnots.pdf&#34;&gt;PDF from existing Github repo&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If it is a local file, just put it in the &lt;code&gt;content/post/&lt;/code&gt;, &lt;code&gt;static/&lt;/code&gt; or &lt;code&gt;static/courses/&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;20190228_Report.pdf&#34;&gt;Files from /content/post/ folder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../static/20190228_Report.pdf&#34;&gt;Files from static/ folder&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../static/courses/&#34;&gt;Files from static/courses/ folder&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

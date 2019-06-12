@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>website on Fan Cheng</title>
+    <link>https://fancheng.me/tags/website/</link>
+    <description>Recent content in website on Fan Cheng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; {year} Fan Cheng</copyright>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fancheng.me/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Add Local or Online Files to a Rmarkdown Post</title>
+      <link>https://fancheng.me/2019/06/12/build-website/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fancheng.me/2019/06/12/build-website/</guid>
+      <description>When you want to include a pdf file in your Rmarkdown post, here are the tips for you.
+ If the file is from your online Github repo, you should first get the link for the file.  First click the PDF file in your Github repo. Then right click in the download button and copy the link by copy link address.
+PDF from existing Github repo
+ If it is a local file, just put it in the content/post/, static/ or static/courses/ folder.</description>
+    </item>
+    
+  </channel>
+</rss>
