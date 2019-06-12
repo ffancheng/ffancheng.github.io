@@ -1,0 +1,32 @@
+---
+title: How to Add Local or Online Files to a Rmarkdown Post
+author: Fan Cheng
+date: '2019-06-12'
+slug: build-website
+categories: []
+tags:
+  - website
+  - blogdown
+  - Hugo
+  - Github
+image:
+  caption: ''
+  focal_point: ''
+---
+
+When you want to include a pdf file in your Rmarkdown post, here are the tips for you.
+
+- If the file is from your online Github repo, you should first get the link for the file.
+
+First click the [PDF file in your Github repo](https://github.com/ffancheng/CufeBuaaSeminars/blob/master/2018_S1/20180420/20180420_FanCheng_MovingKnots.pdf). Then right click in the `download` button and copy the link by `copy link address`.
+
+[PDF from existing Github repo](https://github.com/ffancheng/CufeBuaaSeminars/raw/master/2018_S1/20180420/20180420_FanCheng_MovingKnots.pdf)
+
+
+- If it is a local file, just put it in the `content/post/`, `static/` or `static/courses/` folder.
+
+[Files from /content/post/ folder](20190228_Report.pdf)
+
+[Files from static/ folder](../../static/20190228_Report.pdf)
+
+[Files from static/courses/ folder](../../static/courses/)
