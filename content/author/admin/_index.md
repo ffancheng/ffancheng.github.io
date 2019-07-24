@@ -19,7 +19,7 @@ organizations = [ { name = "Monash University", url = "https://www.monash.edu" }
 # bio = "My research interests include distributed robotics, mobile computing and programmable matter."
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email = ""
+email = "Fan.Cheng@monash.edu"
 
 # List (academic) interests or hobbies
 interests = [
@@ -57,7 +57,7 @@ interests = [
 [[social]]
   icon = "envelope"
   icon_pack = "fas"
-  link = "mailto:Fan.Cheng@monash.edu"  # For a direct email link, use "mailto:test@example.org".
+  link = "mailto:Fan.Cheng@monash.edu"
 
 [[social]]
   icon = "twitter"
@@ -93,4 +93,5 @@ interests = [
 
 +++
   
-Fan Cheng is a Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by [Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). Her research interests include exploratory data analysis, time series analysis, and statistical computing.
+Fan Cheng is a Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by \\
+[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). Her research interests include exploratory data analysis, time series analysis, and statistical computing.
