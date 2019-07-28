@@ -89,7 +89,7 @@ interests = [
 [[social]]
   icon = "cv"
   icon_pack = "ai"
-  link = "https://fancheng.me/FanCV/"
+  link = "https://fancheng.me/FanCV"
 
 +++
   
