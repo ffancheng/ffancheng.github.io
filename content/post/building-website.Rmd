@@ -1,0 +1,71 @@
+---
+title: Building Website Using Blogdown, Hugo and Github Pages
+author: Fan Cheng
+date: '2019-07-30'
+slug: building-website
+categories: []
+tags:
+  - blogdown
+  - Github
+  - Hugo
+  - website
+  - Github Pages
+image:
+  caption: ''
+  focal_point: ''
+---
+
+This is a post about how to build your websites.
+
+# Github Setting
+
+## Register for a Github account
+If you haven't got an Github account, please register [here](https://github.com).
+
+## Creat a new repository
+In you repository page, press the "New Repository" button on the top-right to create a new repository to run your website.
+
+Input the repo name as "USERNAME.github.io", where the "USERNAME" is your github account name. Make sure you repo is set to be public and "Initialize with a README".
+
+![Creating a Github repo]()
+
+## Create a new branch
+Since the Github page is deployed through the `master` branch, we need a new branch to run the source code for building the website. In the `branch` button, input `sources` and press the "Create new `sources` branch". Then you can switch between your two branches `master` and `sources`.
+
+## Change the default branch to `sources`
+Next to the `1 commit` in your repository, there is a `2 branches` button. Press it and you can see `master` branch is set to be your default branch. Then `change the default branch` to be your newly built `sources`. There will be windows for you to confirm your change. Please make sure `I understand`. Now if you go back to your `2 branches` page, you will see your default branch is set as `sources`. 
+
+By doing this, you will later be able to create a new website in your default `sources` branch and deploy it to the `master` branch such that your Github page can be built through the `master` branch. 
+## Clone your repository
+Now you need a local copy of your Github repo.
+
+First, install Git in your computer. (TODO)
+
+Second, generate and add SSH key to your Git agent. Open the terminal and generate the SSH key using
+```
+ssh-keygen -t rsa -b 4096 -C "YOUREMAIL@gmail.com"
+```
+During the process, you will be asked to choose a file name for your key, and `ENTER` three times would be fine. Then the key is saved as `/Users/USERNAME/.ssh/id_rsa`.
+
+Next, add the key you just generated to your Git agent using
+```
+eval "$(ssh-agent-s)"
+ssh-add -K ~/.ssh/id_rsa
+```
+
+Finally, copy the key to your Github settings. You can open the public key `/Users/USERNAME/.ssh/id_rsa.pub` with an editor and copy it, or use the command line
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+After that, go to your Github settings - SSH and GPG keys - New SSH key, and paste the key with a name you like.
+
+If you have already finished with the SSH key, you can clone the repo in your terminal using `git clone "https://github.com/USERNAME/USERNAME.github.io.git"`. Now your have a local copy of the Github repo like this.
+
+![Local Ccpy of the Github repo]()
+
+If the whole process goes well, then you are all set with Github now.
+
+
+# RStudio Building
+## Open a new project
+
