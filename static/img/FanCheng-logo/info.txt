@@ -1,0 +1,11 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: TrashHand
+font link: https://www.fontsquirrel.com/fonts/TrashHand
+font author: Luce Avérous
+font author site: http://www.luce.averous.com/
+
+
+{"bg":"#FAE801","icon":"#372581","font":"#ffffff","slogan":"#ffffff"}
+      
