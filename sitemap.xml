@@ -3,50 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fancheng.me/2019/07/30/building-website/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fancheng.me/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://fancheng.me/tags/github/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/tags/github-pages/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/tags/hugo/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/post/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/tags/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/tags/blogdown/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://fancheng.me/tags/website/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://fancheng.me/2019/06/12/build-website/</loc>
     <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fancheng.me/tags/hugo/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://fancheng.me/post/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://fancheng.me/tags/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://fancheng.me/tags/blogdown/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://fancheng.me/tags/website/</loc>
-    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
