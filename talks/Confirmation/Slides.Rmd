@@ -4,7 +4,7 @@ title: "Manifold Learning on Empirical Probability Distributions"
 author: "Fan Cheng"
 institute: "Rob J Hyndman<br/>Anastasios Panagiotelis"
 date: "`r Sys.Date()`"
-output:
+output:   
   xaringan::moon_reader:
     # lib_dir: libs
     nature:
@@ -69,23 +69,19 @@ Figure from Hyndman, Liu & Pinson (2018): a 2-D representation of the electricit
 ???
 
 P2: challenging
-- overwhelming and complex features -- irrelevant or redundant features will slow down the machine learning algorithms
+- overwhelming and complex features -- irrelevant features will slow down the machine learning algorithms
 - intrinsical lower-dimensional data points
 
 P3: DR
-
 Manifold learning is a well-founded option for dimensionality reduction, which explores the underlying lower-dimensional manifold structure of high-dimensional data.
 
 P4: A possibly non-Euclidean space
 
-Plot: why to do this
-
+Plot:
 Hyndman, Liu & Pinson (2018) constructed the visualization of long series of electricity consumption data by first converting the demand data to distributions, and then embedding to a 2-D scatter plot.
-
 The most typical points are shown in red, and the most unusual are shown in black
 
 3 Problems: 
-
 - only 500 households - not able to scale
 - JS not the proper distance
 - did not explore the proposition of different ML algorithms
@@ -125,7 +121,7 @@ Smart electricity meters are currently deployed in millions of households to col
 
 ## Irish smart meter data
 
-```{r smartmeter, fig.align = 'center', out.width = "75%", fig.cap="Two smart-meter demand examples from the Irish smart meter data set.", echo = FALSE, message=FALSE}
+```{r smartmeter, fig.align = 'center', out.width = "75%", fig.cap="Two smart-meter demand examples from the Irish smart meter data set.", echo = FALSE, message=FALSE, warning=FALSE}
 # knitr::include_graphics("smartmeter.png")
 load("smartmeter_2id.rda")
 plotly::ggplotly(p, width=600, height=400)
@@ -150,7 +146,7 @@ plotly -- zoom in to show the day-of-week pattern
 
 - Allows clustering of households based on probabilistic behavior rather than coincident behavior
 
-    
+--
 - Sample quantiles better than kernel density estimate:
 
     - presence of zeros
@@ -166,7 +162,6 @@ plotly -- zoom in to show the day-of-week pattern
 
 ???
 
-[quantile plot by time of day]
 The tenth percentile, for example, is the value below which 10% of the observations can be found
 
 - impose some smoothness constrains on these distributions to improve estimates
@@ -178,10 +173,12 @@ The tenth percentile, for example, is the value below which 10% of the observati
 
 pmf <- function(x, p, q)
 {
-  qcdf <- approx(q,p,xout=x,yleft=0,yright=1,ties=mean)$y # without ties, warnings come up
+  qcdf <- approx(q,p,xout=x,yleft=0,yright=1,ties=mean)$y 
   qpmf <- c(0,diff(qcdf))
   return(qpmf / sum(qpmf))
 }
+
+[quantile plot by time of day]
 
 
 ---
@@ -224,8 +221,8 @@ background-position: 90% 90%
 
 
 <!-- .pull-right[ -->
-<!-- <iframe src="p.html" width="100%" height="400" id="igraph" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe> -->
-<!-- ] -->
+<!-- <iframe src="p.html" width="100%" height="400" id="igraph" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe>] -->
+
 ---
 
 ### Manifold learning on Swissroll data
@@ -293,11 +290,14 @@ The resulting kd-tree.
 the process 
 https://en.wikipedia.org/wiki/File:KDTree-animation.gif
 
+ANN increased the speed by not searching for the best point exhaustively. 
+eg. can be achieved by simply setting an upper bound on the number of points to examine the tree, or by interrupting the search process bsed upon a real time clock
+
 - build kd-trees (binary tree)
 
 - search in the tree instead of the original space
 
-- $(1+\epsilon)$ nearest neighbor ?? 
+- $(1+\epsilon)$ nearest neighbor  
 
 ---
 
