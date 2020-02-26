@@ -198,7 +198,7 @@ class: inverse, center, middle
     
 - Common steps: 
     
-    - nearest neighbors finding
+    - nearest neighbors finding 
         
     - eigendecomposition of a certain matrix
     
@@ -330,8 +330,8 @@ knitr::include_graphics("knng20_1id336tow.png")
 knitr::include_graphics("matrix.png")
 ```
 
+???
 - The approximation techniques use the SVD of $W$ and $C$ to generate approximations of eigenvalues and eigenvectors
-
 
 ---
 class: inverse, center, middle
