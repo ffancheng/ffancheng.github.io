@@ -189,10 +189,7 @@ class: inverse, center, middle
 ## To work with 336 distributions per household
 ---
 
-
-
 # Manifold learning
-
 
 - *Manifold* -- where the data set lies on a low-dimensional Euclidean space embedded in a high-dimensional feature space
 
@@ -206,8 +203,8 @@ class: inverse, center, middle
     - eigendecomposition of a certain matrix
     
 .right[
-![]("https://fancheng.me/talks/Confirmation/manifold1.gif")
-]
+![Saw](https://fancheng.me/talks/Confirmation/manifold.gif
+) ]
 
 ???
 
@@ -221,9 +218,9 @@ class: inverse, center, middle
         - PCA aims to attain the directions along which the data has the maximum variance
         - MDS is similar in spirit to PCA but it takes a dissimilarity matrix as input, and choose the configuration in $R^k$ whose coordinates are determined by the first $k$ eigenvectors of certain matrix derived from the input.
 
-background-image: url("sr.png")
-background-size: 450px
-background-position: 90% 90%
+<!-- background-image: url("sr.png") -->
+<!-- background-size: 450px -->
+<!-- background-position: 90% 90% -->
 
 <!-- .pull-right[ -->
 <!-- <iframe src="p.html" width="100%" height="400" id="igraph" scrolling="yes" seamless="seamless" frameBorder="0"> </iframe>] -->
