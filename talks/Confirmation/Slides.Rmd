@@ -206,7 +206,7 @@ class: inverse, center, middle
     - eigendecomposition of a certain matrix
     
 .right[
-![]("matrix.png")
+![]("https://fancheng.me/talks/Confirmation/manifold1.gif")
 ]
 
 ???
