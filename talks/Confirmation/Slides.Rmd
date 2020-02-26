@@ -291,7 +291,7 @@ the process
 https://en.wikipedia.org/wiki/File:KDTree-animation.gif
 
 ANN increased the speed by not searching for the best point exhaustively. 
-eg. can be achieved by simply setting an upper bound on the number of points to examine the tree, or by interrupting the search process bsed upon a real time clock
+eg. can be achieved by simply setting an upper bound on the number of points to examine the tree, or by interrupting the search process based upon a real-time clock
 
 - build kd-trees (binary tree)
 
@@ -324,8 +324,12 @@ knitr::include_graphics("knng20_1id336tow.png")
     
     - Column-sampling approximation
 
-???
-- find a pic??
+```{r matrix, fig.align = 'center', out.width = "80%", echo = FALSE}
+knitr::include_graphics("matrix.png")
+```
+
+- The approximation techniques use the SVD of $W$ and $C$ to generate approximations of eigenvalues and eigenvectors
+
 
 ---
 class: inverse, center, middle
