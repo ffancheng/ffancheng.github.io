@@ -26,7 +26,7 @@ output:
 <!-- xaringan::infinite_moon_reader() # real-time view -->
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE}
 options(htmltools.dir.version = FALSE)
 library(tidyverse)
 library(data.table)
@@ -58,7 +58,7 @@ library(dimRed)
 ]
 
 .pull-right[
-<img src="/Users/fche0019/git/eda/docs/Confirmation/Slides/LEembedding.png">
+<img src="LEembedding.png">
 <font size="1">
 .caption[
 Figure from Hyndman, Liu & Pinson (2018): a 2-D representation of the electricity data from all 500 households. 
@@ -109,7 +109,7 @@ Inspired by this idea, I propose to explore manifold learning methods on empiric
 
 .pull-right[
 .center[
-<!-- <img src="/Users/fche0019/git/eda/docs/Confirmation/Slides/smart-meters.jpg" width=280, height=280> -->
+<!-- <img src="smart-meters.jpg" width=280, height=280> -->
 <img src="https://d346xxcyottdqx.cloudfront.net/wp-content/uploads/2016/05/smart-meters-2.jpg" width=280, height=280>
 ]
 ]
@@ -126,8 +126,8 @@ Smart electricity meters are currently deployed in millions of households to col
 ## Irish smart meter data
 
 ```{r smartmeter, fig.align = 'center', out.width = "75%", fig.cap="Two smart-meter demand examples from the Irish smart meter data set.", echo = FALSE, message=FALSE}
-# knitr::include_graphics(here::here("docs/Confirmation/Report/figures/smartmeter.png"))
-load(here::here("docs/confirmation/Slides/smartmeter_2id.rda"))
+# knitr::include_graphics("smartmeter.png")
+load("smartmeter_2id.rda")
 plotly::ggplotly(p, width=600, height=400)
 ```
 
@@ -192,7 +192,7 @@ class: inverse, center, middle
 ## To work with 336 distributions per household
 ---
 
-background-image: url("/Users/fche0019/git/eda/docs/confirmation/Slides/sr.png")
+background-image: url("sr.png")
 background-size: 450px
 background-position: 90% 90%
 
@@ -231,7 +231,7 @@ background-position: 90% 90%
 ### Manifold learning on Swissroll data
 
 ```{r swissroll, fig.align = 'center', out.width = "80%", fig.cap="Embedding results of Swissroll data with n=1000.", echo = FALSE, message=FALSE}
-knitr::include_graphics(here::here("docs/confirmation/Slides/srembedding_6.png"))
+knitr::include_graphics("srembedding_6.png")
 # dataset <- loadDataSet("Swiss Roll", n = 1000)
 # embedded_data <- list()
 # embed_methods <- dimRedMethodList()[c(17, 18, 9, 13, 12)]
@@ -304,7 +304,7 @@ https://en.wikipedia.org/wiki/File:KDTree-animation.gif
 # Connected neighborhood graph 
 
 ```{r neighbor, fig.align = 'center', out.width = "80%", fig.cap="Neighborhood graph for meter 1003 with k=20.", echo = FALSE}
-knitr::include_graphics(here::here("docs/confirmation/Report/figures/knng20_1id336tow.png"))
+knitr::include_graphics("knng20_1id336tow.png")
 ```
 
 ???
@@ -392,7 +392,7 @@ $$H(P, Q)=\frac{1}{\sqrt{2}}\|\sqrt{P}-\sqrt{Q}\|_{2}$$
 ## Manifold learning embedding plots
 
 ```{r embedding, fig.align = 'center', out.width = "80%", fig.cap="Embedding from three spectral embedding methods. The first subplot is the neighborhood graph. The colors represent half-hourly time of day.", echo = FALSE}
-knitr::include_graphics(here::here("docs/confirmation/Report/figures/embedding_tod_1id336tow.png"))
+knitr::include_graphics("embedding_tod_1id336tow.png")
 ```
 
 ---
@@ -417,7 +417,7 @@ class: inverse, center, middle
 ## High density region plot
 
 ```{r hdr, fig.align = 'center', out.width = "85%", fig.cap="High density region plot from one household (meter 1003). The most typical points are shown in red, while the most anomalous are shown in black.", echo = FALSE}
-knitr::include_graphics(here::here("docs/confirmation/Report/figures/hdr20_1id336tow.png"))
+knitr::include_graphics("hdr20_1id336tow.png")
 ```
 ---
 
