@@ -23,7 +23,7 @@ email = "Fan.Cheng@monash.edu"
 
 # List (academic) interests or hobbies
 interests = [
-  "Exploratory Data Analysis",
+  "Manifold Learning",
   "Time Series Analysis",
   "Statistical Computing"
 ]
@@ -58,6 +58,11 @@ interests = [
   icon = "envelope"
   icon_pack = "fas"
   link = "mailto:Fan.Cheng@monash.edu"
+  
+[[social]]
+  icon = "github"
+  icon_pack = "fab"
+  link = "https://github.com/ffancheng"
 
 [[social]]
   icon = "twitter"
@@ -78,11 +83,7 @@ interests = [
   icon = "orcid"
   icon_pack = "ai"
   link = "https://orcid.org/0000-0003-0009-3262" 
-  
-[[social]]
-  icon = "github"
-  icon_pack = "fab"
-  link = "https://github.com/ffancheng"
+
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -94,4 +95,4 @@ interests = [
 +++
   
 Fan Cheng is a Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by \\
-[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). Her research interests include exploratory data analysis, time series analysis, and statistical computing.
+[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*. 

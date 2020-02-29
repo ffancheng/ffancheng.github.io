@@ -52,7 +52,7 @@ time_format = "3:04 PM"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "Fan.Cheng@monash.edu"
 # phone = ""
-address = "[Department of Econometrics & Business Statistics, Monash University, 900 Dandenong Rd, Caulfield East VIC 3145, Australia](https://www.monash.edu/business/ebs)"
+address = "[Department of Econometrics & Business Statistics, <br/>Monash University, <br/>900 Dandenong Rd, <br/>Caulfield East VIC 3145, <br/>Australia](https://www.monash.edu/business/ebs)"
 email_form = 0
 
 # Contact links
@@ -130,6 +130,17 @@ sharing = true
 
 # Configuration of project pages.
 [projects]
+  # Views for associated content.
+  #   1: List
+  #   2: Compact
+  #   3: Card
+  #   4: Citation (publications only)
+  post_view = 2
+  publication_view = 2
+  talk_view = 2
+  
+# Configuration of talks pages.
+[talks]
   # Views for associated content.
   #   1: List
   #   2: Compact
