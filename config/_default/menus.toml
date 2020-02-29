@@ -18,9 +18,9 @@
   url = "#projects"
   weight = 20
 
- [[main]]
+[[main]]
   name = "Talks"
-  url = "#featured"
+  url = "#talks"
   weight = 20
 
 [[main]]
