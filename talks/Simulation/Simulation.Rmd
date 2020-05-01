@@ -37,7 +37,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache=FALSE, messages=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo = TRUE, cache=TRUE, messages=FALSE, warning=FALSE)
 ```
 
 ```{r packages, include=FALSE}
@@ -90,10 +90,10 @@ $$
 
 Here we consider a Swissroll dataset consists of `N=2000` points, and the error term $\varepsilon \sim \mathcal{N}(0, \ 0.05^{2})$. The 3-D plot of Swissroll data and the corresponding meta data are shown in Figure \@ref(fig:sr). 
 
-```{r sr, fig.align='center', out.width="100%", fig.cap="The 3-D plot and the corresponding meta data plot of a Swissroll data with N=2000.", echo=FALSE, include=TRUE}
+```{r sr, fig.align='center', out.width="100%", fig.cap="The 3-D plot and the corresponding meta data plot of a Swissroll data with N=2000.", echo=TRUE, include=TRUE}
 N <- 2000; sigma <- 0.05
 sr <- dimRed::loadDataSet("Swiss Roll", n = N, sigma = sigma)
-cols <- dimRed:::colorize(sr@meta[, seq_len(min(3, ncol(sr@meta))), drop = FALSE])
+cols <- dimRed:::colorize(sr@meta[,seq_len(min(3, ncol(sr@meta))), drop=FALSE])
 meta <- sr@meta
 par(mfrow = c(1,2))
 plot(sr, type = "3vars")
@@ -116,7 +116,8 @@ When applying Isomap to the Swissroll data, we initialize the number of nearest 
 
 ```{r isomap, message=FALSE}
 K <- 50; d = 2
-sr_isomap <- embed(sr, "Isomap", knn = K, ndim = d, get_geod = FALSE, .mute = c("message", "output"))
+sr_isomap <- embed(sr, "Isomap", knn = K, ndim = d, get_geod = FALSE, 
+                   .mute = c("message", "output"))
 # X: 3d sr data; Y: 2d embedded data; meta: 2d meta data
 X <- as.matrix(sr_isomap@org.data)
 Y <- sr_isomap@data@data
@@ -131,7 +132,7 @@ The first step of Isomap is to assign neighbors to each data point, which requir
  
 One solution for large data size is finding approximate nearest neighbors using kd-trees. By constructing kd-trees, there is no need to compute all pairwise distances, and it scales the computation to $O(N\log(N))$. 
 
-When using kd-trees, the dedault value for the error bound parameter is `eps=0`, which implies exact nearest neighbour search. By tuning this parameter, we could attain the embedding using ANN. We start with $eps=1$ and get the embedding plot in Figure \@ref(fig:mapping) (c).
+When using kd-trees, the dedault value for the error bound parameter is $\epsilon=0$, which implies exact nearest neighbour search. By tuning this parameter, we could attain the embedding using ANN. We start with $\epsilon=1$ and get the embedding plot in Figure \@ref(fig:mapping) (c).
 
 ```{r annIsomap, message=FALSE}
 eps <- 1
@@ -147,8 +148,6 @@ plot(meta, col = cols, xlab = "", main = "(a)")
 plot(sr_isomap, type = "2vars", main = "(b)")
 plot(sr_isomap_ann, type = "2vars", main = "(c)")
 ```
-
-
 
 
 # Quality measures
@@ -241,7 +240,7 @@ high-dimensional space, i.e. $\rho_{ij} > r_{ij}$, is called an *intrusion*. Ana
 
 We can also associate the above quality measures with co-ranking matrix using the idea of intrusions and extrusions as Figure \@ref(fig:matrix).
 
-```{r matrix, fig.align = 'center', out.width = "100%", echo = FALSE, fig.cap = "For all (pairs of) quality criteria, a schematic illustration of the co-ranking matrix is shown: the blocks that are taken into account are shaded. The LCMC quantifies the true positives, the T&C focus on the false positives and false negatives, and the MRREs encompass the positives (true and false) and negatives (true and false). For the MRREs, the block $UL_K$ is covered twice."}
+```{r matrix, fig.align='center', out.width="100%", echo=FALSE, include=TRUE, fig.cap="For all pairs of quality criteria, a schematic illustration of the co-ranking matrix is shown: the blocks that are taken into account are shaded. The LCMC quantifies the true positives, the TC focus on the false positives and false negatives, and the MRREs encompass the positives (true and false) and negatives (true and false). For the MRREs, the block UL is covered twice."}
 knitr::include_graphics("figures/coRanking3.png")
 ```
 
@@ -250,7 +249,7 @@ Therefore, Lee and Verleyssen distinguished two types of intrusions/extrusions, 
 A *K-intrusion* (resp. *K-extrusion*) is an intrusion for which $r_{ij} < K$ (resp. $\rho_{ij} < K$). 
 Subsequently, mild K-intrusions are events for which $r_{ij} < \rho_{ij} \leq K$, while hard K-intrusions are defined by $r_{ij} \leq K < \rho_{ij}$. Mild K-extrusions and hard K-extrusions are defined accordingly.
 
-```{r Kins, fig.align = 'center', out.width = "100%", echo = FALSE}
+```{r Kins, fig.align = 'center', out.width = "100%", echo = FALSE, fig.cap="Intrusions and extrusions of co-Ranking matrix."}
 # knitr::include_graphics("coRanking1.png")
 knitr::include_graphics("figures/coRanking2.png")
 ```
@@ -328,19 +327,18 @@ $$
 The function $R$ measures the average quality of the neighborhood embeddings. Embedding $Y$ is considered better than embedding $\tilde{Y}$ in the local-neighborhood-preserving sense if $R(X, Y) < R(X, \tilde{Y})$. This means that on the average, $Y$ preserves the structure of the local neighborhoods better than $\tilde{Y}$.
 
 
-
 # Quality measures for Isomap embeddings 
 
-With these quality measures, we can further calculate the Isomap embedding quality of both exact NN and ANN as shown in Table \@ref(tab:quality).  
+With these quality measures, we can further calculate the Isomap embedding quality of both exact NN and ANN as shown in Table \@ref(tab:quality).
 
-```{r dr_quality, message=FALSE, cache=TRUE, include=TRUE}
+```{r dr_quality, message=FALSE}
 quality_isomap <- dr_quality(X, Y, pars)
 quality_isomap_ann <- dr_quality(X1, Y1, pars1)
 qualities <- rbind(quality_isomap$quality, quality_isomap_ann$quality)[, 1:6]
 
 compare <- microbenchmark::microbenchmark(
-  embed(sr, "Isomap", knn = K, ndim = d, get_geod = FALSE, .mute = c("message", "output")),
-  embed(sr, "annIsomap", knn = K, eps = eps, ndim = d, get_geod = FALSE, .mute = c("message", "output")),
+  embed(sr, "Isomap", knn = K, ndim = d, get_geod = FALSE),
+  embed(sr, "annIsomap", knn = K, eps = eps, ndim = d, get_geod = FALSE),
   times = 3,
   unit = "s"
 )
@@ -348,12 +346,12 @@ compare <- microbenchmark::microbenchmark(
 # summary(compare)[,"mean"]
 ```
 
-```{r quality, include=FALSE}
-qualities <- cbind(qualities, Time_sec = summary(compare)[,"mean"])
-kable(qualities, digits = 3, format = "latex") %>%
-  kable_styling(latex_options = "striped")
+```{r quality, echo=TRUE}
+qualities <- cbind(qualities, Time_sec = summary(compare)[, "mean"])
+row.names(qualities) <- c("NN", "ANN")
+knitr::kable(qualities, digits = 3) %>%
+  kable_styling(latex_options = "striped", full_width = TRUE)
 ```
-
 
 # Improvements
 
@@ -363,7 +361,7 @@ The difference of the quality measures between exacct NN and ANN is not obvious.
 
 By varying the values of `K` and `eps`, the quality measures can guide in finding the optimal parameters. The optimal value for K can be obtained from the quality output, which is `r as.numeric(rownames(qualities)[1])`. Then we focus on tuning `eps`.
 
-```{r optimal_eps, message=FALSE, cache=TRUE}
+```{r optimal_eps, message=FALSE, cache=TRUE, echo=TRUE}
 K <- qualities$K[1]
 eps_seq <- seq(0, 2, 0.1)
 quality_eps <- matrix(NA, length(eps_seq), ncol(qualities) + 1)
@@ -374,7 +372,7 @@ for(i in 1:length(eps_seq)){
   # cat("eps =", eps, "\n")
   quality_eps[i, "Time_sec"] <- summary(microbenchmark::microbenchmark(
     sr_isomap_eps <- dimRed::embed(sr, "annIsomap", knn = K, eps = eps, ndim = d, get_geod = FALSE, .mute = c("message", "output")),
-    times = 3, 
+    times = 3,
     unit = "s"
   ))[,"mean"]
 
@@ -386,9 +384,9 @@ for(i in 1:length(eps_seq)){
 }
 ```
 
-Finally, we can plot all the quality measures and computation time to find optimal `eps`. 
+Finally, we can plot all the quality measures and computation time to find optimal `eps`.
 
-```{r eps_plot}
+```{r eps_plot, echo=FALSE}
 df <- tidyr::gather(as_tibble(quality_eps), key = "quality", value = "value", -eps, -K)
 p <- ggplot(df, aes(x = eps, y = value)) +
   geom_line(aes(color = quality, linetype = quality), size = 0.5) +
@@ -399,7 +397,7 @@ p
 ```
 
 
-```{r plot_optim, message=FALSE, echo=TRUE, include=FALSE}
+```{r plot_optim, message=FALSE, echo=TRUE}
 # Plotting using optimal parameters
 eps_optim <- quality_eps[which.max(as.tibble(quality_eps[-1,])$lcmc), "eps"]
 sr_isomap_ann_optim <- embed(sr, "annIsomap", knn = K, eps = eps_optim, ndim = 2, get_geod = FALSE, .mute = c("message", "output"))
@@ -411,19 +409,19 @@ plot(sr_isomap_ann_optim, type = "2vars", main = paste("ANN with K=", K, "eps=",
 ```
 
 
+
 ## Larger data size: N
 
 A larger data size might show an obvious improvement with ANN. 
 
 ## More algorithms
 
-
 ## More manifolds
 
 
 
 # Questions
-
+    
 1) With each setting (different algorithms or different NN searching method), we can get
 
 - the embedding plot vs the meta data plot,
@@ -431,34 +429,33 @@ A larger data size might show an obvious improvement with ANN.
 - different quality measures. 
 
 How do we compare the embedding plots?
-
-
+  
+  
 2) Our expectation is to get "faster and not too much worse" ANN. "Faster" can be achived by increasing the data size and compare the computation time in seconds ("Time_sec" column in the quality table). 
 
 How do we define "not too much worse" with the plots and quality table?
-
-
+  
+  
 3) To find optimal parameters, how to define "optimal" here?
-
+  
 Further, how do we reach a trade-off between computation time and quality measures?
-
-
+  
+  
 4) Since Isomap is not doing a good job here, what else algorithms would be the top options? 
-
-
+  
+  
 5) Similar to 4), what else manifolds despite Swissroll? 
-
-```{r manifolds, fig.align='center', out.width="100%"}
-manifolds <- dataSetList()[c(1,2,4:9)]
-par(mfrow = c(4,2))
-for(i in 1:length(manifolds)){
-  x <- dimRed::loadDataSet(manifolds[i], n = 2000, sigma = 0)
-  plot(x, type = "3vars", main = manifolds[i])
-}
+  
+```{r manifolds, fig.align='center', out.width="80%", echo=FALSE}
+# manifolds <- dataSetList()[c(1,2,4:9)]
+# par(mfrow = c(3,3))
+# for(i in 1:length(manifolds)){
+#   x <- dimRed::loadDataSet(manifolds[i], n = 2000, sigma = 0)
+#   plot(x, type = "3vars", main = manifolds[i])
+# }
+knitr::include_graphics("figures/manifolds.png")
 ```
-
-
-
+\newpage
 
 <!-- # References -->
 \setlength{\parindent}{-0.2in}
