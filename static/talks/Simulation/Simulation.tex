@@ -28,6 +28,47 @@
 \usepackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \usepackage[style=authoryear-comp,]{biblatex}
+\addbibresource{references.bib}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
@@ -339,7 +380,19 @@ X_3 = \theta_1 \times \sin{\theta_1} + \varepsilon_3.
 \right.
 \]
 
-Here we consider a Swissroll dataset consists of \texttt{N=2000} points, and the error term \(\varepsilon \sim \mathcal{N}(0, \ 0.05^{2})\). The 3-D plot of Swissroll data and the corresponding meta data are shown in Figure \ref{fig:swissroll}.
+Here we consider a Swissroll dataset consists of \texttt{N=2000} points, and the error term \(\varepsilon \sim \mathcal{N}(0, \ 0.05^{2})\). The 3-D plot of Swissroll data and the corresponding meta data are shown in Figure \ref{fig:sr}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{N \textless{}{-}}\StringTok{ }\DecValTok{2000}\NormalTok{; sigma \textless{}{-}}\StringTok{ }\FloatTok{0.05}
+\NormalTok{sr \textless{}{-}}\StringTok{ }\NormalTok{dimRed}\OperatorTok{::}\KeywordTok{loadDataSet}\NormalTok{(}\StringTok{"Swiss Roll"}\NormalTok{, }\DataTypeTok{n =}\NormalTok{ N, }\DataTypeTok{sigma =}\NormalTok{ sigma)}
+\NormalTok{cols \textless{}{-}}\StringTok{ }\NormalTok{dimRed}\OperatorTok{:::}\KeywordTok{colorize}\NormalTok{(sr}\OperatorTok{@}\NormalTok{meta[,}\KeywordTok{seq\_len}\NormalTok{(}\KeywordTok{min}\NormalTok{(}\DecValTok{3}\NormalTok{, }\KeywordTok{ncol}\NormalTok{(sr}\OperatorTok{@}\NormalTok{meta))), }\DataTypeTok{drop=}\OtherTok{FALSE}\NormalTok{])}
+\NormalTok{meta \textless{}{-}}\StringTok{ }\NormalTok{sr}\OperatorTok{@}\NormalTok{meta}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(sr, }\DataTypeTok{type =} \StringTok{"3vars"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(sr}\OperatorTok{@}\NormalTok{meta, }\DataTypeTok{col =}\NormalTok{ cols, }\DataTypeTok{xlab =} \StringTok{""}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{figure}
 
@@ -364,6 +417,18 @@ It can be viewed as an extension to MDS, a classical method for embedding dissim
 
 When applying Isomap to the Swissroll data, we initialize the number of nearest neighbors (NN) as \texttt{K=50}, and the number of embedded dimensions as \texttt{d=2}. The 2-D embedding plot is show in Figure \ref{fig:mapping} (b).
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{K \textless{}{-}}\StringTok{ }\DecValTok{50}\NormalTok{; d =}\StringTok{ }\DecValTok{2}
+\NormalTok{sr\_isomap \textless{}{-}}\StringTok{ }\KeywordTok{embed}\NormalTok{(sr, }\StringTok{"Isomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{ndim =}\NormalTok{ d, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{, }
+                   \DataTypeTok{.mute =} \KeywordTok{c}\NormalTok{(}\StringTok{"message"}\NormalTok{, }\StringTok{"output"}\NormalTok{))}
+\CommentTok{\# X: 3d sr data; Y: 2d embedded data; meta: 2d meta data}
+\NormalTok{X \textless{}{-}}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(sr\_isomap}\OperatorTok{@}\NormalTok{org.data)}
+\NormalTok{Y \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap}\OperatorTok{@}\NormalTok{data}\OperatorTok{@}\NormalTok{data}
+\NormalTok{pars \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap}\OperatorTok{@}\NormalTok{pars}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{isomap-with-approximate-nearest-neighbors-ann}{%
 \section{Isomap with approximate nearest neighbors (ANN)}\label{isomap-with-approximate-nearest-neighbors-ann}}
 
@@ -371,7 +436,17 @@ The first step of Isomap is to assign neighbors to each data point, which requir
 
 One solution for large data size is finding approximate nearest neighbors using kd-trees. By constructing kd-trees, there is no need to compute all pairwise distances, and it scales the computation to \(O(N\log(N))\).
 
-When using kd-trees, the dedault value for the error bound parameter is \texttt{eps=0}, which implies exact nearest neighbour search. By tuning this parameter, we could attain the embedding using ANN. We start with \(eps=1\) and get the embedding plot in Figure \ref{fig:mapping} (c).
+When using kd-trees, the dedault value for the error bound parameter is \(\epsilon=0\), which implies exact nearest neighbour search. By tuning this parameter, we could attain the embedding using ANN. We start with \(\epsilon=1\) and get the embedding plot in Figure \ref{fig:mapping} (c).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{eps \textless{}{-}}\StringTok{ }\DecValTok{1}
+\NormalTok{sr\_isomap\_ann \textless{}{-}}\StringTok{ }\KeywordTok{embed}\NormalTok{(sr, }\StringTok{"annIsomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{eps =}\NormalTok{ eps, }\DataTypeTok{ndim =}\NormalTok{ d, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{)}
+\NormalTok{X1 \textless{}{-}}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(sr\_isomap\_ann}\OperatorTok{@}\NormalTok{org.data)}
+\NormalTok{Y1 \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap\_ann}\OperatorTok{@}\NormalTok{data}\OperatorTok{@}\NormalTok{data}
+\NormalTok{pars1 \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap\_ann}\OperatorTok{@}\NormalTok{pars}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{figure}
 
@@ -459,18 +534,32 @@ Q_{kl}=\left|\left\{(i, j) | \rho_{i j}=k \text { and } r_{i j}=l\right\}\right|
 
 Errors of a DR mapping correspond to off-diagonal entries of this co-ranking matrix.
 A point \(j\) that gets a lower rank with respect to a point \(i\) in the low-dimensional space than in the
-high-dimensional space, i.e.~\(\rho_{ij} > r_{ij}\), is called an \emph{intrusion}. Analogously, if \(\delta_j\) has a higher rank in the low-dimensional space it is called an \emph{extrusion}. As shown in Figure \ref{fig:K-ins} from \textcite{Lee2008-cx}, intrusions and extrusions correspond to off-diagonal entries in the upper or lower triangle, respectively.
+high-dimensional space, i.e.~\(\rho_{ij} > r_{ij}\), is called an \emph{intrusion}. Analogously, if \(\delta_j\) has a higher rank in the low-dimensional space it is called an \emph{extrusion}. As shown in Figure \ref{fig:Kins} from \textcite{Lee2008-cx}, intrusions and extrusions correspond to off-diagonal entries in the upper or lower triangle, respectively.
 
 We can also associate the above quality measures with co-ranking matrix using the idea of intrusions and extrusions as Figure \ref{fig:matrix}.
 
-\begin{center}\includegraphics[width=1\linewidth]{../coRanking3} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figures/coRanking3} 
+
+}
+
+\caption{For all pairs of quality criteria, a schematic illustration of the co-ranking matrix is shown: the blocks that are taken into account are shaded. The LCMC quantifies the true positives, the TC focus on the false positives and false negatives, and the MRREs encompass the positives (true and false) and negatives (true and false). For the MRREs, the block UL is covered twice.}\label{fig:matrix}
+\end{figure}
 
 Since the preservation of local relationships is important, rank errors for large ranks are not as critical as rank errors of close points.
 Therefore, Lee and Verleyssen distinguished two types of intrusions/extrusions, those within a \(K\)-neighborhood, which are benevolent, and those moving across this boundary, which are malign with respect to quality.
 A \emph{K-intrusion} (resp. \emph{K-extrusion}) is an intrusion for which \(r_{ij} < K\) (resp. \(\rho_{ij} < K\)).
 Subsequently, mild K-intrusions are events for which \(r_{ij} < \rho_{ij} \leq K\), while hard K-intrusions are defined by \(r_{ij} \leq K < \rho_{ij}\). Mild K-extrusions and hard K-extrusions are defined accordingly.
 
-\begin{center}\includegraphics[width=1\linewidth]{../coRanking2} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{figures/coRanking2} 
+
+}
+
+\caption{Intrusions and extrusions of co-Ranking matrix.}\label{fig:Kins}
+\end{figure}
 
 Define \(Q_{NX}(K)\) as the criterion that summarizes co-ranking matrix \(\mathrm{Q}\) in a simple way: it counts the number of points that remain inside the K-neighborhood while projecting, i.e., all points which keep their rank, and all mild in- and extrusions. It is defined as
 \[
@@ -509,6 +598,42 @@ The function \(R\) measures the average quality of the neighborhood embeddings. 
 
 With these quality measures, we can further calculate the Isomap embedding quality of both exact NN and ANN as shown in Table \ref{tab:quality}.
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{quality\_isomap \textless{}{-}}\StringTok{ }\KeywordTok{dr\_quality}\NormalTok{(X, Y, pars)}
+\NormalTok{quality\_isomap\_ann \textless{}{-}}\StringTok{ }\KeywordTok{dr\_quality}\NormalTok{(X1, Y1, pars1)}
+\NormalTok{qualities \textless{}{-}}\StringTok{ }\KeywordTok{rbind}\NormalTok{(quality\_isomap}\OperatorTok{$}\NormalTok{quality, quality\_isomap\_ann}\OperatorTok{$}\NormalTok{quality)[, }\DecValTok{1}\OperatorTok{:}\DecValTok{6}\NormalTok{]}
+
+\NormalTok{compare \textless{}{-}}\StringTok{ }\NormalTok{microbenchmark}\OperatorTok{::}\KeywordTok{microbenchmark}\NormalTok{(}
+  \KeywordTok{embed}\NormalTok{(sr, }\StringTok{"Isomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{ndim =}\NormalTok{ d, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{),}
+  \KeywordTok{embed}\NormalTok{(sr, }\StringTok{"annIsomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{eps =}\NormalTok{ eps, }\DataTypeTok{ndim =}\NormalTok{ d, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{),}
+  \DataTypeTok{times =} \DecValTok{3}\NormalTok{,}
+  \DataTypeTok{unit =} \StringTok{"s"}
+\NormalTok{)}
+\CommentTok{\# average running time}
+\CommentTok{\# summary(compare)[,"mean"]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{qualities \textless{}{-}}\StringTok{ }\KeywordTok{cbind}\NormalTok{(qualities, }\DataTypeTok{Time\_sec =} \KeywordTok{summary}\NormalTok{(compare)[, }\StringTok{"mean"}\NormalTok{])}
+\KeywordTok{row.names}\NormalTok{(qualities) \textless{}{-}}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"NN"}\NormalTok{, }\StringTok{"ANN"}\NormalTok{)}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(qualities, }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{) }\OperatorTok{\%\textgreater{}\%}
+\StringTok{  }\KeywordTok{kable\_styling}\NormalTok{(}\DataTypeTok{latex\_options =} \StringTok{"striped"}\NormalTok{, }\DataTypeTok{full\_width =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\hline
+  & K & M\_T & M\_C & W\_n & W\_nu & lcmc & Time\_sec\\
+\hline
+\rowcolor{gray!6}  NN & 21 & 0.983 & 0.873 & 0.010 & 0.005 & 0.476 & 5.321\\
+\hline
+ANN & 21 & 0.983 & 0.882 & 0.011 & 0.006 & 0.425 & 7.656\\
+\hline
+\end{tabu}
+
 \hypertarget{improvements}{%
 \section{Improvements}\label{improvements}}
 
@@ -519,33 +644,49 @@ The difference of the quality measures between exacct NN and ANN is not obvious.
 
 By varying the values of \texttt{K} and \texttt{eps}, the quality measures can guide in finding the optimal parameters. The optimal value for K can be obtained from the quality output, which is NA. Then we focus on tuning \texttt{eps}.
 
-\begin{verbatim}
-## eps = 0 
-## eps = 0.1 
-## eps = 0.2 
-## eps = 0.3 
-## eps = 0.4 
-## eps = 0.5 
-## eps = 0.6 
-## eps = 0.7 
-## eps = 0.8 
-## eps = 0.9 
-## eps = 1 
-## eps = 1.1 
-## eps = 1.2 
-## eps = 1.3 
-## eps = 1.4 
-## eps = 1.5 
-## eps = 1.6 
-## eps = 1.7 
-## eps = 1.8 
-## eps = 1.9 
-## eps = 2
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{K \textless{}{-}}\StringTok{ }\NormalTok{qualities}\OperatorTok{$}\NormalTok{K[}\DecValTok{1}\NormalTok{]}
+\NormalTok{eps\_seq \textless{}{-}}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{2}\NormalTok{, }\FloatTok{0.1}\NormalTok{)}
+\NormalTok{quality\_eps \textless{}{-}}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\OtherTok{NA}\NormalTok{, }\KeywordTok{length}\NormalTok{(eps\_seq), }\KeywordTok{ncol}\NormalTok{(qualities) }\OperatorTok{+}\StringTok{ }\DecValTok{1}\NormalTok{)}
+\KeywordTok{colnames}\NormalTok{(quality\_eps) \textless{}{-}}\StringTok{ }\KeywordTok{c}\NormalTok{(}\KeywordTok{colnames}\NormalTok{(qualities), }\StringTok{"eps"}\NormalTok{)}
+
+\ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(eps\_seq))\{}
+\NormalTok{  eps \textless{}{-}}\StringTok{ }\NormalTok{eps\_seq[i]}
+  \CommentTok{\# cat("eps =", eps, "\textbackslash{}n")}
+\NormalTok{  quality\_eps[i, }\StringTok{"Time\_sec"}\NormalTok{] \textless{}{-}}\StringTok{ }\KeywordTok{summary}\NormalTok{(microbenchmark}\OperatorTok{::}\KeywordTok{microbenchmark}\NormalTok{(}
+\NormalTok{    sr\_isomap\_eps \textless{}{-}}\StringTok{ }\NormalTok{dimRed}\OperatorTok{::}\KeywordTok{embed}\NormalTok{(sr, }\StringTok{"annIsomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{eps =}\NormalTok{ eps, }\DataTypeTok{ndim =}\NormalTok{ d, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{.mute =} \KeywordTok{c}\NormalTok{(}\StringTok{"message"}\NormalTok{, }\StringTok{"output"}\NormalTok{)),}
+    \DataTypeTok{times =} \DecValTok{3}\NormalTok{,}
+    \DataTypeTok{unit =} \StringTok{"s"}
+\NormalTok{  ))[,}\StringTok{"mean"}\NormalTok{]}
+
+\NormalTok{  Xi \textless{}{-}}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(sr\_isomap\_eps}\OperatorTok{@}\NormalTok{org.data); Yi \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap\_eps}\OperatorTok{@}\NormalTok{data}\OperatorTok{@}\NormalTok{data}
+\NormalTok{  parsi \textless{}{-}}\StringTok{ }\NormalTok{sr\_isomap\_eps}\OperatorTok{@}\NormalTok{pars}
+
+\NormalTok{  quality\_eps[i, }\DecValTok{1}\OperatorTok{:}\DecValTok{6}\NormalTok{] \textless{}{-}}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(}\KeywordTok{dr\_quality}\NormalTok{(Xi, Yi, parsi)}\OperatorTok{$}\NormalTok{quality[, }\DecValTok{1}\OperatorTok{:}\DecValTok{6}\NormalTok{])}
+\NormalTok{  quality\_eps[i, }\StringTok{"eps"}\NormalTok{] \textless{}{-}}\StringTok{ }\NormalTok{eps}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 Finally, we can plot all the quality measures and computation time to find optimal \texttt{eps}.
 
 \includegraphics{Simulation_files/figure-latex/eps_plot-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Plotting using optimal parameters}
+\NormalTok{eps\_optim \textless{}{-}}\StringTok{ }\NormalTok{quality\_eps[}\KeywordTok{which.max}\NormalTok{(}\KeywordTok{as.tibble}\NormalTok{(quality\_eps[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{,])}\OperatorTok{$}\NormalTok{lcmc), }\StringTok{"eps"}\NormalTok{]}
+\NormalTok{sr\_isomap\_ann\_optim \textless{}{-}}\StringTok{ }\KeywordTok{embed}\NormalTok{(sr, }\StringTok{"annIsomap"}\NormalTok{, }\DataTypeTok{knn =}\NormalTok{ K, }\DataTypeTok{eps =}\NormalTok{ eps\_optim, }\DataTypeTok{ndim =} \DecValTok{2}\NormalTok{, }\DataTypeTok{get\_geod =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{.mute =} \KeywordTok{c}\NormalTok{(}\StringTok{"message"}\NormalTok{, }\StringTok{"output"}\NormalTok{))}
+
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{3}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(sr, }\DataTypeTok{type =} \StringTok{"2vars"}\NormalTok{, }\DataTypeTok{main =} \StringTok{"Swissroll data"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(sr\_isomap, }\DataTypeTok{type =} \StringTok{"2vars"}\NormalTok{, }\DataTypeTok{main =} \StringTok{"Exact NN"}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(sr\_isomap\_ann\_optim, }\DataTypeTok{type =} \StringTok{"2vars"}\NormalTok{, }\DataTypeTok{main =} \KeywordTok{paste}\NormalTok{(}\StringTok{"ANN with K="}\NormalTok{, K, }\StringTok{"eps="}\NormalTok{, eps\_optim))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Simulation_files/figure-latex/plot_optim-1.pdf}
 
 \hypertarget{larger-data-size-n}{%
 \subsection{Larger data size: N}\label{larger-data-size-n}}
@@ -606,7 +747,8 @@ Further, how do we reach a trade-off between computation time and quality measur
   Similar to 4), what else manifolds despite Swissroll?
 \end{enumerate}
 
-\includegraphics{Simulation_files/figure-latex/manifolds-1.pdf}
+\begin{center}\includegraphics[width=0.8\linewidth]{figures/manifolds} \end{center}
+\newpage
 
 \setlength{\parindent}{-0.2in}
 \setlength{\leftskip}{0.2in}

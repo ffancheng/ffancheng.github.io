@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.24)  2 MAY 2020 01:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.24)  2 MAY 2020 03:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -537,46 +537,69 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+)) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+(/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+(/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count394
+\FV@InFile=\read3
+\FV@TabBox=\box47
+\c@FancyVerbLine=\count395
+\FV@StepNumber=\count396
+\FV@OutFile=\write4
+) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip76
+\fb@frw=\dimen157
+\fb@frh=\dimen158
+\FrameRule=\dimen159
+\FrameSep=\dimen160
+) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip76
-\LTright=\skip77
-\LTpre=\skip78
-\LTpost=\skip79
-\LTchunksize=\count394
-\LTcapwidth=\dimen157
-\LT@head=\box47
-\LT@firsthead=\box48
-\LT@foot=\box49
-\LT@lastfoot=\box50
-\LT@cols=\count395
-\LT@rows=\count396
-\c@LT@tables=\count397
-\c@LT@chunks=\count398
+\LTleft=\skip77
+\LTright=\skip78
+\LTpre=\skip79
+\LTpost=\skip80
+\LTchunksize=\count397
+\LTcapwidth=\dimen161
+\LT@head=\box48
+\LT@firsthead=\box49
+\LT@foot=\box50
+\LT@lastfoot=\box51
+\LT@cols=\count398
+\LT@rows=\count399
+\c@LT@tables=\count400
+\c@LT@chunks=\count401
 \LT@p@ftn=\toks26
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen158
-\lightrulewidth=\dimen159
-\cmidrulewidth=\dimen160
-\belowrulesep=\dimen161
-\belowbottomsep=\dimen162
-\aboverulesep=\dimen163
-\abovetopsep=\dimen164
-\cmidrulesep=\dimen165
-\cmidrulekern=\dimen166
-\defaultaddspace=\dimen167
-\@cmidla=\count399
-\@cmidlb=\count400
-\@aboverulesep=\dimen168
-\@belowrulesep=\dimen169
-\@thisruleclass=\count401
-\@lastruleclass=\count402
-\@thisrulewidth=\dimen170
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count402
+\@cmidlb=\count403
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count404
+\@lastruleclass=\count405
+\@thisrulewidth=\dimen174
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box51
-\fn@width=\dimen171
+\fn@notes=\box52
+\fn@width=\dimen175
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -588,11 +611,9 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-(/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen172
-\Gin@req@width=\dimen173
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
 Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
 y)
@@ -603,17 +624,17 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen174
-\captionmargin@=\dimen175
-\captionwidth=\dimen176
-\caption@tempdima=\dimen177
-\caption@indent=\dimen178
-\caption@parindent=\dimen179
-\caption@hangindent=\dimen180
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count403
-\c@continuedfloat=\count404
+\c@caption@flags=\count406
+\c@continuedfloat=\count407
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -641,15 +662,15 @@ Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS)
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip80
-\f@nch@O@elh=\skip81
-\f@nch@O@erh=\skip82
-\f@nch@O@olh=\skip83
-\f@nch@O@orh=\skip84
-\f@nch@O@elf=\skip85
-\f@nch@O@erf=\skip86
-\f@nch@O@olf=\skip87
-\f@nch@O@orf=\skip88
+\f@nch@headwidth=\skip81
+\f@nch@O@elh=\skip82
+\f@nch@O@erh=\skip83
+\f@nch@O@olh=\skip84
+\f@nch@O@orh=\skip85
+\f@nch@O@elf=\skip86
+\f@nch@O@erf=\skip87
+\f@nch@O@olf=\skip88
+\f@nch@O@orf=\skip89
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
@@ -660,15 +681,15 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box52
-\beforetitleunit=\skip89
-\aftertitleunit=\skip90
-\ttl@plus=\dimen181
-\ttl@minus=\dimen182
+\ttl@box=\box53
+\beforetitleunit=\skip90
+\aftertitleunit=\skip91
+\ttl@plus=\dimen185
+\ttl@minus=\dimen186
 \ttl@toksa=\toks27
-\titlewidth=\dimen183
-\titlewidthlast=\dimen184
-\titlewidthfirst=\dimen185
+\titlewidth=\dimen187
+\titlewidthlast=\dimen188
+\titlewidthfirst=\dimen189
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -677,6 +698,7 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -687,11 +709,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 214.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 214.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 214.
+Package hyperref Info: Option `breaklinks' set `true' on input line 255.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 255.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 255.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 214.
+Package hyperref Info: Option `colorlinks' set `true' on input line 255.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
@@ -703,16 +725,16 @@ y
 Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count405
-\calc@Bcount=\count406
-\calc@Adimen=\dimen186
-\calc@Bdimen=\dimen187
-\calc@Askip=\skip91
-\calc@Bskip=\skip92
+\calc@Acount=\count408
+\calc@Bcount=\count409
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
+\calc@Askip=\skip92
+\calc@Bskip=\skip93
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count407
-\calc@Cskip=\skip93
+\calc@Ccount=\count410
+\calc@Cskip=\skip94
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
@@ -720,21 +742,21 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count408
-\l_MT_multwidth_dim=\dimen188
-\origjot=\skip94
-\l_MT_shortvdotswithinadjustabove_dim=\dimen189
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen190
-\l_MT_above_intertext_sep=\dimen191
-\l_MT_below_intertext_sep=\dimen192
-\l_MT_above_shortintertext_sep=\dimen193
-\l_MT_below_shortintertext_sep=\dimen194
+\g_MT_multlinerow_int=\count411
+\l_MT_multwidth_dim=\dimen192
+\origjot=\skip95
+\l_MT_shortvdotswithinadjustabove_dim=\dimen193
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen194
+\l_MT_above_intertext_sep=\dimen195
+\l_MT_below_intertext_sep=\dimen196
+\l_MT_above_shortintertext_sep=\dimen197
+\l_MT_below_shortintertext_sep=\dimen198
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/eukdate/eukdate.sty
 Package: eukdate 2009/03/18 v1.04 UK format date (Hart's Rules) with weekday
-\c@euk@date=\count409
-\c@euk@month=\count410
-\c@euk@century=\count411
-\c@euk@year=\count412
+\c@euk@date=\count412
+\c@euk@month=\count413
+\c@euk@century=\count414
+\c@euk@year=\count415
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/xpatch/xpatch.sty (/Use
 rs/fche0019/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-02-25 L3 programming layer (loader) 
@@ -742,86 +764,86 @@ Package: expl3 2020-02-25 L3 programming layer (loader)
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmo
 de.def
 File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count413
-\l__pdf_internal_box=\box53
+\l__kernel_color_stack_int=\count416
+\l__pdf_internal_box=\box54
 ))
 Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
 
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.
 sty
 Package: xparse 2020-02-25 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count414
-\g__xparse_grabber_int=\count415
-\l__xparse_m_args_int=\count416
-\l__xparse_v_nesting_int=\count417
+\l__xparse_current_arg_int=\count417
+\g__xparse_grabber_int=\count418
+\l__xparse_m_args_int=\count419
+\l__xparse_v_nesting_int=\count420
 )) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2019/04/15 v1.9.1
 Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box54
-\TP@holdbox=\box55
-\TPHorizModule=\dimen195
-\TPVertModule=\dimen196
-\TP@margin=\dimen197
-\TP@absmargin=\dimen198
+\TP@textbox=\box55
+\TP@holdbox=\box56
+\TPHorizModule=\dimen199
+\TPVertModule=\dimen256
+\TP@margin=\dimen257
+\TP@absmargin=\dimen258
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen199
-\TP@ox=\dimen256
-\TP@oy=\dimen257
+\TPboxrulesize=\dimen259
+\TP@ox=\dimen260
+\TP@oy=\dimen261
 \TP@tbargs=\toks28
-\TP@prevdepth=\dimen258
+\TP@prevdepth=\dimen262
 TextBlockOrigin set to 0pt x 0pt
 )
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threepartt
 able.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box56
+\@tempboxb=\box57
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip95
-\multirow@cntb=\count418
-\multirow@dima=\skip96
-\bigstrutjot=\dimen259
+\multirow@colwidth=\skip96
+\multirow@cntb=\count421
+\multirow@dima=\skip97
+\bigstrutjot=\dimen263
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box57
-\UL@hyphenbox=\box58
-\UL@skip=\skip97
+\UL@box=\box58
+\UL@hyphenbox=\box59
+\UL@skip=\skip98
 \UL@hook=\toks29
-\UL@height=\dimen260
-\UL@pe=\count419
-\UL@pixel=\dimen261
-\ULC@box=\box59
+\UL@height=\dimen264
+\UL@pe=\count422
+\UL@pixel=\dimen265
+\ULC@box=\box60
 Package: ulem 2019/11/18
-\ULdepth=\dimen262
+\ULdepth=\dimen266
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen263
-\ar@mcellbox=\box60
-\extrarowheight=\dimen264
+\col@sep=\dimen267
+\ar@mcellbox=\box61
+\extrarowheight=\dimen268
 \NC@list=\toks30
-\extratabsurround=\skip98
-\backup@length=\skip99
-\ar@cellbox=\box61
+\extratabsurround=\skip99
+\backup@length=\skip100
+\ar@cellbox=\box62
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen265
-\WF@size=\dimen266
-\c@WF@wrappedlines=\count420
-\WF@box=\box62
+\wrapoverhang=\dimen269
+\WF@size=\dimen270
+\c@WF@wrappedlines=\count423
+\WF@box=\box63
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count421
+\c@float@type=\count424
 \float@exts=\toks32
-\float@box=\box63
+\float@box=\box64
 \@float@everytoks=\toks33
-\@floatcapt=\box64
+\@floatcapt=\box65
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks34
-\minrowclearance=\skip100
+\minrowclearance=\skip101
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
@@ -832,33 +854,33 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box65
-\sift@deathcycles=\count422
-\@vwid@loff=\dimen267
-\@vwid@roff=\dimen268
+\@vwid@box=\box66
+\sift@deathcycles=\count425
+\@vwid@loff=\dimen271
+\@vwid@roff=\dimen272
 )
-\c@taburow=\count423
-\tabu@nbcols=\count424
-\tabu@cnt=\count425
-\tabu@Xcol=\count426
-\tabu@alloc=\count427
-\tabu@nested=\count428
-\tabu@target=\dimen269
-\tabu@spreadtarget=\dimen270
-\tabu@naturalX=\dimen271
-\tabucolX=\dimen272
-\tabu@Xsum=\dimen273
-\extrarowdepth=\dimen274
-\abovetabulinesep=\dimen275
-\belowtabulinesep=\dimen276
-\tabustrutrule=\dimen277
+\c@taburow=\count426
+\tabu@nbcols=\count427
+\tabu@cnt=\count428
+\tabu@Xcol=\count429
+\tabu@alloc=\count430
+\tabu@nested=\count431
+\tabu@target=\dimen273
+\tabu@spreadtarget=\dimen274
+\tabu@naturalX=\dimen275
+\tabucolX=\dimen276
+\tabu@Xsum=\dimen277
+\extrarowdepth=\dimen278
+\abovetabulinesep=\dimen279
+\belowtabulinesep=\dimen280
+\tabustrutrule=\dimen281
 \tabu@thebody=\toks35
 \tabu@footnotes=\toks36
-\tabu@box=\box66
-\tabu@arstrutbox=\box67
-\tabu@hleads=\box68
-\tabu@vleads=\box69
-\tabu@cellskip=\skip101
+\tabu@box=\box67
+\tabu@arstrutbox=\box68
+\tabu@hleads=\box69
+\tabu@vleads=\box70
+\tabu@cellskip=\skip102
 )
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threepart
 tablex.sty
@@ -869,52 +891,52 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip102
+\TPTL@width=\skip103
 ) (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen278
-\c@nlinenum=\count429
+\rotheadsize=\dimen282
+\c@nlinenum=\count432
 \TeXr@lab=\toks37
 )
-\@quotelevel=\count430
-\@quotereset=\count431
+\@quotelevel=\count433
+\@quotereset=\count434
 (./Simulation.aux)
 \openout1 = `Simulation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 303.
-LaTeX Font Info:    ... okay on input line 303.
-LaTeX Info: Redefining \microtypecontext on input line 303.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 344.
+LaTeX Font Info:    ... okay on input line 344.
+LaTeX Info: Redefining \microtypecontext on input line 344.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 303.
+LaTeX Info: Redefining \showhyphens on input line 344.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-\AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 303.
+\AtBeginShipoutBox=\box71
+Package hyperref Info: Link coloring ON on input line 344.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -924,14 +946,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 string.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count432
+\c@section@level=\count435
 )
-LaTeX Info: Redefining \ref on input line 303.
-LaTeX Info: Redefining \pageref on input line 303.
-LaTeX Info: Redefining \nameref on input line 303.
+LaTeX Info: Redefining \ref on input line 344.
+LaTeX Info: Redefining \pageref on input line 344.
+LaTeX Info: Redefining \nameref on input line 344.
 (./Simulation.out) (./Simulation.out)
-\@outlinefile=\write4
-\openout4 = `Simulation.out'.
+\@outlinefile=\write5
+\openout5 = `Simulation.out'.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -980,8 +1002,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Simulation.bbl' found.
 (./Simulation.bbl)
-Package biblatex Info: Reference section=0 on input line 303.
-Package biblatex Info: Reference segment=0 on input line 303.
+Package biblatex Info: Reference section=0 on input line 344.
+Package biblatex Info: Reference segment=0 on input line 344.
 
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-bas
 e.sty
@@ -1000,253 +1022,286 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Trying to load font information for T1+fvs on input line 30
-4.
+LaTeX Font Info:    Trying to load font information for T1+fvs on input line 34
+5.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvs.fd
 File: t1fvs.fd 2004/09/07 scalable font definitions for T1/fvs.
 )
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 304.
+(Font)              scaled to size 9.85492pt on input line 345.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 304.
+(Font)              scaled to size 22.39185pt on input line 345.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 304.
+(Font)              scaled to size 22.39185pt on input line 345.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 13.49991pt on input line 307.
+(Font)              scaled to size 13.49991pt on input line 348.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 3
-09.
+50.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-309.
+350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-309.
+350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-309.
+350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 309.
+(Font)              scaled to size 11.40997pt on input line 350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 309.
+(Font)              scaled to size 8.33606pt on input line 350.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 309.
+(Font)              scaled to size 6.25204pt on input line 350.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 309.
+(Font)              scaled to size 11.40997pt on input line 350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 309.
+(Font)              scaled to size 8.33606pt on input line 350.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 309.
+(Font)              scaled to size 6.25204pt on input line 350.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-309.
+350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-309.
+350.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-
-LaTeX Warning: Citation 'Lee2008-sx' on page 1 undefined on input line 315.
-
-[1
+) [1
 
 {/Users/fche0019/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 34
-2.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 38
+3.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 342.
+(Font)              scaled to size 9.85492pt on input line 383.
 
-LaTeX Warning: Reference `fig:swissroll' on page 2 undefined on input line 342.
+Package xcolor Warning: Incompatible color definition on input line 385.
+
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 388.
+
+Package xcolor Warning: Incompatible color definition on input line 395.
 
 
-<Simulation_files/figure-latex/sr-1.pdf, id=91, 578.16pt x 361.35pt>
+Package xcolor Warning: Incompatible color definition on input line 395.
+
+<Simulation_files/figure-latex/sr-1.pdf, id=94, 578.16pt x 361.35pt>
 File: Simulation_files/figure-latex/sr-1.pdf Graphic file (type pdf)
 <use Simulation_files/figure-latex/sr-1.pdf>
 Package pdftex.def Info: Simulation_files/figure-latex/sr-1.pdf  used on input 
-line 346.
+line 399.
 (pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
-
-LaTeX Warning: Citation 'Dijkstra1959-ml' on page 2 undefined on input line 361
-.
-
-
-LaTeX Warning: Citation 'FloydRobert1962-au' on page 2 undefined on input line 
-361.
-
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 363.
+(Font)              scaled to size 12.9599pt on input line 412.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 363.
+(Font)              scaled to size 12.9599pt on input line 412.
 [2 <./Simulation_files/figure-latex/sr-1.pdf>]
-<Simulation_files/figure-latex/mapping-1.pdf, id=106, 578.16pt x 361.35pt>
-File: Simulation_files/figure-latex/mapping-1.pdf Graphic file (type pdf)
-<use Simulation_files/figure-latex/mapping-1.pdf>
-Package pdftex.def Info: Simulation_files/figure-latex/mapping-1.pdf  used on i
-nput line 378.
-(pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
 
-LaTeX Warning: Citation 'Lee2008-cx' on page 3 undefined on input line 388.
+Package xcolor Warning: Incompatible color definition on input line 420.
+
+LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10.95> not available
+(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 425.
+LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 425.
+
+Package xcolor Warning: Incompatible color definition on input line 430.
 
 
-LaTeX Warning: Citation 'Gracia2014-ae' on page 3 undefined on input line 388.
+Package xcolor Warning: Incompatible color definition on input line 430.
+
+
+Package xcolor Warning: Incompatible color definition on input line 441.
 
 [3]
 
-LaTeX Warning: Citation 'Venna2006-nd' on page 4 undefined on input line 398.
+Package xcolor Warning: Incompatible color definition on input line 449.
 
 
-LaTeX Warning: Citation 'Chen2009-su' on page 4 undefined on input line 398.
+Package xcolor Warning: Incompatible color definition on input line 449.
 
-
-LaTeX Warning: Citation 'Lee2007-wq' on page 4 undefined on input line 398.
-
-
-LaTeX Warning: Citation 'Goldberg2009-tb' on page 4 undefined on input line 398
-.
-
-
-LaTeX Warning: Citation 'Goldberg2009-tb' on page 4 undefined on input line 398
-.
-
+<Simulation_files/figure-latex/mapping-1.pdf, id=121, 578.16pt x 361.35pt>
+File: Simulation_files/figure-latex/mapping-1.pdf Graphic file (type pdf)
+<use Simulation_files/figure-latex/mapping-1.pdf>
+Package pdftex.def Info: Simulation_files/figure-latex/mapping-1.pdf  used on i
+nput line 453.
+(pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
 [4 <./Simulation_files/figure-latex/mapping-1.pdf>]
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 402.
-
-LaTeX Warning: Citation 'Venna2006-nd' on page 5 undefined on input line 404.
-
+(Font)              scaled to size 10.79993pt on input line 477.
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 4
-08.
+83.
 (/Users/fche0019/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-
-LaTeX Warning: Citation 'Lee2008-cx' on page 5 undefined on input line 425.
-
-[5]
-
-LaTeX Warning: Citation 'Chen2009-su' on page 6 undefined on input line 441.
-
+) [5] [6]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 451.
+(Font)              scaled to size 12.50409pt on input line 526.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 451.
+(Font)              scaled to size 9.37807pt on input line 526.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 451.
+(Font)              scaled to size 7.29405pt on input line 526.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 451.
+(Font)              scaled to size 12.50409pt on input line 526.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 451.
+(Font)              scaled to size 9.37807pt on input line 526.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 451.
-
-LaTeX Warning: Citation 'Lee2008-cx' on page 6 undefined on input line 453.
-
-
-LaTeX Warning: Reference `fig:K-ins' on page 6 undefined on input line 462.
-
-
-LaTeX Warning: Citation 'Lee2008-cx' on page 6 undefined on input line 462.
-
-
-LaTeX Warning: Reference `fig:matrix' on page 6 undefined on input line 464.
-
-[6]
-<../coRanking3.png, id=137, 623.32875pt x 237.88875pt>
-File: ../coRanking3.png Graphic file (type png)
-<use ../coRanking3.png>
-Package pdftex.def Info: ../coRanking3.png  used on input line 466.
+(Font)              scaled to size 7.29405pt on input line 526.
+<figures/coRanking3.png, id=165, 623.32875pt x 237.88875pt>
+File: figures/coRanking3.png Graphic file (type png)
+<use figures/coRanking3.png>
+Package pdftex.def Info: figures/coRanking3.png  used on input line 543.
 (pdftex.def)             Requested size: 455.25447pt x 173.74445pt.
-<../coRanking2.png, id=139, 825.0825pt x 417.56pt>
-File: ../coRanking2.png Graphic file (type png)
-<use ../coRanking2.png>
-Package pdftex.def Info: ../coRanking2.png  used on input line 473.
+<figures/coRanking2.png, id=167, 825.0825pt x 417.56pt>
+File: figures/coRanking2.png Graphic file (type png)
+<use figures/coRanking2.png>
+Package pdftex.def Info: figures/coRanking2.png  used on input line 557.
 (pdftex.def)             Requested size: 455.2446pt x 230.3914pt.
-[7 <../coRanking3.png> <../coRanking2.png>]
+[7] [8 <./figures/coRanking3.png> <./figures/coRanking2.png>]
 
-LaTeX Warning: Citation 'Goldberg2009-tb' on page 8 undefined on input line 484
-.
+LaTeX Warning: Reference `tab:quality' on page 9 undefined on input line 599.
 
-[8]
 
-LaTeX Warning: Reference `tab:quality' on page 9 undefined on input line 510.
+Package xcolor Warning: Incompatible color definition on input line 601.
+
+
+Package xcolor Warning: Incompatible color definition on input line 616.
+
+
+Package xcolor Warning: Incompatible color definition on input line 616.
+
+
+Package xcolor Warning: Incompatible color definition on input line 616.
 
 [9]
-<Simulation_files/figure-latex/eps_plot-1.pdf, id=160, 578.16pt x 361.35pt>
+
+Package xcolor Warning: Incompatible color definition on input line 616.
+
+
+Package xcolor Warning: Incompatible color definition on input line 616.
+
+
+Package xcolor Warning: Incompatible color definition on input line 618.
+
+
+Package xcolor Warning: Incompatible color definition on input line 625.
+
+
+Package xcolor Warning: Incompatible color definition on input line 625.
+
+
+Package xcolor Warning: Incompatible color definition on input line 647.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+[10]
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+
+Package xcolor Warning: Incompatible color definition on input line 670.
+
+<Simulation_files/figure-latex/eps_plot-1.pdf, id=196, 578.16pt x 361.35pt>
 File: Simulation_files/figure-latex/eps_plot-1.pdf Graphic file (type pdf)
 <use Simulation_files/figure-latex/eps_plot-1.pdf>
 Package pdftex.def Info: Simulation_files/figure-latex/eps_plot-1.pdf  used on 
-input line 548.
-(pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
-[10 <./Simulation_files/figure-latex/eps_plot-1.pdf>]
-<Simulation_files/figure-latex/manifolds-1.pdf, id=175, 578.16pt x 361.35pt>
-File: Simulation_files/figure-latex/manifolds-1.pdf Graphic file (type pdf)
-<use Simulation_files/figure-latex/manifolds-1.pdf>
-Package pdftex.def Info: Simulation_files/figure-latex/manifolds-1.pdf  used on
- input line 609.
+input line 674.
 (pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
 
-LaTeX Warning: Empty bibliography on input line 618.
+Package xcolor Warning: Incompatible color definition on input line 676.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 69.
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+[11 <./Simulation_files/figure-latex/eps_plot-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+
+Package xcolor Warning: Incompatible color definition on input line 687.
+
+<Simulation_files/figure-latex/plot_optim-1.pdf, id=206, 578.16pt x 361.35pt>
+File: Simulation_files/figure-latex/plot_optim-1.pdf Graphic file (type pdf)
+<use Simulation_files/figure-latex/plot_optim-1.pdf>
+Package pdftex.def Info: Simulation_files/figure-latex/plot_optim-1.pdf  used o
+n input line 689.
+(pdftex.def)             Requested size: 455.24165pt x 284.52603pt.
+[12 <./Simulation_files/figure-latex/plot_optim-1.pdf>]
+<figures/manifolds.png, id=222, 1535.7375pt x 1676.2625pt>
+File: figures/manifolds.png Graphic file (type png)
+<use figures/manifolds.png>
+Package pdftex.def Info: figures/manifolds.png  used on input line 750.
+(pdftex.def)             Requested size: 364.17905pt x 397.50262pt.
+[13 <./figures/manifolds.png>]
+
+Package caption Warning: Unused \captionsetup[table] on input line 110.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
-[11 <./Simulation_files/figure-latex/manifolds-1.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
+[14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
 (./Simulation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 620.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 620.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
 Package rerunfilecheck Info: File `Simulation.out' has not changed.
 (rerunfilecheck)             Checksum: 45FDA1EFC189954E31B8BB5FA23F88AA;3314.
 
 LaTeX Warning: There were undefined references.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Simulation
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'Simulation.run.xml'.
 \openout1 = `Simulation.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 620.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 762.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 185 (\begingroup)
+### semi simple group (level 1) entered at line 226 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23932 strings out of 482913
- 397418 string characters out of 5958316
- 1087832 words of memory out of 5000000
- 38544 multiletter control sequences out of 15000+600000
- 620021 words of font info for 259 fonts, out of 8000000 for 9000
+ 24475 strings out of 482913
+ 406834 string characters out of 5958316
+ 1100444 words of memory out of 5000000
+ 39054 multiletter control sequences out of 15000+600000
+ 621436 words of font info for 265 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,12n,45p,946b,6029s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,13n,54p,1902b,6328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/fche0019/Library/TinyTeX/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</Users/fche0019/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmex10.pfb></Users/fche0019/Library/TinyTeX/texmf-dist/fonts/type1/public/
@@ -1256,17 +1311,19 @@ type1/public/amsfonts/cm/cmsy10.pfb></Users/fche0019/Library/TinyTeX/texmf-dist
 /fonts/type1/public/mathpazo/fplmbb.pfb></Users/fche0019/Library/TinyTeX/texmf-
 dist/fonts/type1/public/mathpazo/fplmr.pfb></Users/fche0019/Library/TinyTeX/tex
 mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></Users/fche0019/Library/TinyTeX
+/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></Users/fche0019/Library/TinyTeX
 /texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></Users/fche0019/Library/TinyTeX
-/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/fche0019/Library/TinyTeX
-/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/fche0019/Library/TinyTeX
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/fche0019/Lib
-rary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/fche0019/Li
-brary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/fche0019/L
-ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Simulation.pdf (11 pages, 1944554 bytes).
+/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></Users/fche0019/Library/TinyTe
+X/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/fche0019/Library/TinyTe
+X/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/fche0019/Library/TinyTe
+X/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/fche0019/Li
+brary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></Users/fche0019/L
+ibrary/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></Users/fche0019/
+Library/TinyTeX/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Simulation.pdf (14 pages, 2182373 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 20647 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 20652 words of extra memory for PDF output out of 20736 (max. 10000000)
 
