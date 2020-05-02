@@ -34,10 +34,13 @@ output:
     number_sections: yes
     citation_package: biblatex
     latex_engine: pdflatex
+header-includes:
+  \usepackage{makecell,interfaces-makecell}
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache=TRUE, messages=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo=TRUE, cache=FALSE, messages=FALSE, warning=FALSE)
+options(tinytex.verbose = TRUE)
 ```
 
 ```{r packages, include=FALSE}
@@ -47,6 +50,7 @@ library(ggplot2)
 library(reshape2)
 library(knitr)
 library(kableExtra)
+library(tibble)
 set.seed(1)
 source("annIsomap.R")
 source("dr_quality.R")
@@ -62,9 +66,10 @@ Based on the distances, the ranks of the points $x$ in high-dimensional space ca
 Then the $K$-ary neighborhoods of $x_i$ and $y_i$ can be denoted as $U_K(i) = {j: 1 \leq \rho_{ij} \leq K}$ and $V_K(i) = {j: 1 \leq r_{ij} \leq K}$, respectively, where $K$ is the size of the neighborhood. 
 
 The co-ranking matrix [@Lee2008-sx] can then be defined as
-$$
+\begin{equation} 
+\label{equ:coRanking}
 \mathbf{Q}=\left[Q_{k l}\right]_{1 \leqslant k, l \leqslant N-1}, \ \text{with} \ \  Q_{k l}=|\left\{(i, j): \rho_{i j}=k \text { and } r_{i j}=l\right\}|.
-$$
+\end{equation}
 
 
 # Swissroll dataset
@@ -93,7 +98,7 @@ Here we consider a Swissroll dataset consists of `N=2000` points, and the error 
 ```{r sr, fig.align='center', out.width="100%", fig.cap="The 3-D plot and the corresponding meta data plot of a Swissroll data with N=2000.", echo=TRUE, include=TRUE}
 N <- 2000; sigma <- 0.05
 sr <- dimRed::loadDataSet("Swiss Roll", n = N, sigma = sigma)
-cols <- dimRed:::colorize(sr@meta[,seq_len(min(3, ncol(sr@meta))), drop=FALSE])
+cols <- dimRed:::colorize(sr@meta[,seq_len(min(3, ncol(sr@meta))),drop=FALSE])
 meta <- sr@meta
 par(mfrow = c(1,2))
 plot(sr, type = "3vars")
@@ -136,7 +141,7 @@ When using kd-trees, the dedault value for the error bound parameter is $\epsilo
 
 ```{r annIsomap, message=FALSE}
 eps <- 1
-sr_isomap_ann <- embed(sr, "annIsomap", knn = K, eps = eps, ndim = d, get_geod = FALSE)
+sr_isomap_ann <- embed(sr, "annIsomap", knn = K, eps = eps, ndim = d)
 X1 <- as.matrix(sr_isomap_ann@org.data)
 Y1 <- sr_isomap_ann@data@data
 pars1 <- sr_isomap_ann@pars
@@ -172,17 +177,23 @@ Therefore, they determine the quality of the embedding by analyzing the degree i
 @Venna2006-nd defined two quality measures for manifold embeddings to distinguish two type of errors where distant points become neighbors, or neighbors are embedded faraway from each other. 
 
 - the trustworthiness of the embedding, where trustworthiness errors are defined as distant input points that entered the same output neighborhood. 
-$$M_{T}(K)=1-\frac{2}{G_{K}} \sum_{i=1}^{N} \sum_{j \in V_{K}(i) \notin U_{K}(i)}(\rho{ij}-K),$$
+\begin{equation}
+\label{trustworthiness}
+M_{T}(K)=1-\frac{2}{G_{K}} \sum_{i=1}^{N} \sum_{j \in V_{K}(i) \notin U_{K}(i)}(\rho{ij}-K),
+\end{equation}
 where the normalizing factor
 $$
 G_{K}=\left\{\begin{array}{ll}
-N K(2 N-3 K-1) & \text { if } K<N / 2 \\
-N(N-K)(N-K-1) & \text { if } K \geqslant N / 2
+N K(2 N-3 K-1) & \text { if } K<N / 2, \\
+N(N-K)(N-K-1) & \text { if } K \geqslant N / 2.
 \end{array}\right.
 $$
 
 - the continuity of the embedding, where continuity errors are defined as data points in the same input neighborhood but in different output neighborhood. 
-$$M_{C}(K)=1-\frac{2}{G_{K}} \sum_{i=1}^{N} \sum_{j \in U_{K}(i) \notin V_{K}(i)}(r{ij}-K).$$
+\begin{equation}
+\label{continuity}
+M_{C}(K)=1-\frac{2}{G_{K}} \sum_{i=1}^{N} \sum_{j \in U_{K}(i) \notin V_{K}(i)}(r{ij}-K).
+\end{equation}
 
 <!-- By introducing a parameter $\alpha \in[0,1]$, the T&C measure is defined as: 
 $$
@@ -194,12 +205,14 @@ The interval of $Q_T(K)$ is $[0,1]$, and higher values means a good preservation
 ## Mean Relative Rank Errors (MRREs)
 
 @Lee2008-cx developed the mean relative rank errors which is based on similar principle to that of the T&C, while the two elements are defined as 
-$$
+\begin{equation}
+\label{MRREs}
 \begin{aligned}
 &W_{n}(K)=1-\frac{1}{H_{K}} \sum_{i=1}^{N} \sum_{j \in U_{K}(i)} \frac{|\rho{ij}-r{ij}|}{\rho{ij}}, \\
 &W_{\nu}(K)=1-\frac{1}{H_{k}} \sum_{i=1}^{n} \sum_{j \in V_{k(i)}} \frac{|\rho{ij}-r{ij}|}{r{ij}},
 \end{aligned}
-$$
+\end{equation}
+
 where $H_K$ is the normalizing factor defined as
 $$
 H_{K}=n \sum_{i=1}^{K} \frac{|N-2 i+1|}{i}.
@@ -214,9 +227,10 @@ $$ -->
 ## Local Continuity Meta-Criterion (LCMC)
 
 @Chen2009-su suggested the local continuity criterion to compute the average size of the overlap of K-nearest neighborhoods in the low-dimensional embedding and in the high-dimensional space. The LCMC is defined as 
-$$
+\begin{equation}
+\label{LCMC}
 Q_{LC}(K)=1-\frac{1}{N K} \sum_{i=1}^{N}\left| U_K(i) \bigcap V_K(i) \right|-\frac{K^{2}}{N-1}.
-$$
+\end{equation}
 
 If the overlap between two $K$ neighboring sets is calculated, then the $Q_{LC}(K)$ gives a general measurement for the local faithfulness of the computed embeddings. The interval of $Q_{LC}(K)$ is $[0,1]$, and values next to 1 mean a high neighborhood overlap between the two dimensional spaces, and next to 0 values the opposite. 
 
@@ -229,7 +243,7 @@ From an intuitive point of view, T&C and MRREs try to detect what goes wrong in 
 
 Many different concepts and quality criteria for DR can be summarized using the co-ranking framework, presented by @Lee2008-cx. Several of the aforementioned methods based on distance ranking in local neighborhoods (T&C, MRREs, LCMC), are easily unified into an overall framework. 
 
-The co-ranking matrix $\mathrm{Q}$ is defined with its element being
+The co-ranking matrix $\mathrm{Q}$ is defined in Equation \@ref(equ:coRanking) with its element being
 $$
 Q_{kl}=\left|\left\{(i, j) | \rho_{i j}=k \text { and } r_{i j}=l\right\}\right|.
 $$
@@ -249,16 +263,17 @@ Therefore, Lee and Verleyssen distinguished two types of intrusions/extrusions, 
 A *K-intrusion* (resp. *K-extrusion*) is an intrusion for which $r_{ij} < K$ (resp. $\rho_{ij} < K$). 
 Subsequently, mild K-intrusions are events for which $r_{ij} < \rho_{ij} \leq K$, while hard K-intrusions are defined by $r_{ij} \leq K < \rho_{ij}$. Mild K-extrusions and hard K-extrusions are defined accordingly.
 
-```{r Kins, fig.align = 'center', out.width = "100%", echo = FALSE, fig.cap="Intrusions and extrusions of co-Ranking matrix."}
-# knitr::include_graphics("coRanking1.png")
+```{r Kins, fig.align = 'center', out.width = "100%", echo = FALSE, fig.cap="Block division of the co-ranking matrix, showing the different types of intrusions and extrusions, and their relationship with the rank error."}
 knitr::include_graphics("figures/coRanking2.png")
 ```
 
 
 Define $Q_{NX}(K)$ as the criterion that summarizes co-ranking matrix $\mathrm{Q}$ in a simple way: it counts the number of points that remain inside the K-neighborhood while projecting, i.e., all points which keep their rank, and all mild in- and extrusions. It is defined as 
-$$
+\begin{equation}
+\label{Q_NX}
 Q_{NX}(K)=\frac{1}{K N} \sum_{k=1}^{K} \sum_{l=1}^{K} Q_{k l}.
-$$
+\end{equation}
+
 The range is $Q_{N X}(K) \in[0,1]$, where 1 means a perfect embedding. 
 
 
@@ -313,16 +328,17 @@ G(X, Y) &= \inf _{\left\{A, b: A^{\prime} A=I, b \in \mathbb{R}^{D}\right\}} \su
 &= \inf _{\left\{A: A^{\prime} A=I\right\}}\left\|H\left(X-Y A^{\prime}\right)\right\|_{F}^{2},
 \end{aligned}
 $$
-where $\left\| \right\|_{F}$ is the Frobenius norm.
+where $\left\| \cdot \right\|_{F}$ is the Frobenius norm.
 
 
 They define how well an embedding preserves the local neighborhoods using the Procrustes statistic $G(X_i,Y_i)$ of each neighborhood-embedding pair $(X_i,Y_i)$. Therefore, a global embedding that preserves
 the local structure can be found by minimizing the sum of the Procrustes statistics of all neighborhood-embedding pairs.
 
 Let $X_{i}$ be the neighborhood of $x_{i}(i=1, \ldots, N)$ in the high dimension and $Y_{i}$ be its embedding. Define
-$$
+\begin{equation}
+\label{procrustes}
 R(X, Y)=\frac{1}{N} \sum_{i=1}^{N} G \left(X_{i}, Y_{i}\right).
-$$
+\end{equation}
 
 The function $R$ measures the average quality of the neighborhood embeddings. Embedding $Y$ is considered better than embedding $\tilde{Y}$ in the local-neighborhood-preserving sense if $R(X, Y) < R(X, \tilde{Y})$. This means that on the average, $Y$ preserves the structure of the local neighborhoods better than $\tilde{Y}$.
 
@@ -343,13 +359,14 @@ compare <- microbenchmark::microbenchmark(
   unit = "s"
 )
 # average running time
-# summary(compare)[,"mean"]
+Time_sec <- summary(compare)[,"mean"]
 ```
 
-```{r quality, echo=TRUE}
-qualities <- cbind(qualities, Time_sec = summary(compare)[, "mean"])
+```{r quality, echo=FALSE}
+qualities <- cbind(qualities, Time_sec)
 row.names(qualities) <- c("NN", "ANN")
-knitr::kable(qualities, digits = 3) %>%
+knitr::kable(qualities, digits = 3, 
+             caption = "Isomap embedding quality using NN and ANN.") %>%
   kable_styling(latex_options = "striped", full_width = TRUE)
 ```
 
@@ -361,7 +378,7 @@ The difference of the quality measures between exacct NN and ANN is not obvious.
 
 By varying the values of `K` and `eps`, the quality measures can guide in finding the optimal parameters. The optimal value for K can be obtained from the quality output, which is `r as.numeric(rownames(qualities)[1])`. Then we focus on tuning `eps`.
 
-```{r optimal_eps, message=FALSE, cache=TRUE, echo=TRUE}
+```{r optimal_eps, message=FALSE, cache=TRUE, echo=TRUE, eval=TRUE}
 K <- qualities$K[1]
 eps_seq <- seq(0, 2, 0.1)
 quality_eps <- matrix(NA, length(eps_seq), ncol(qualities) + 1)
@@ -384,9 +401,10 @@ for(i in 1:length(eps_seq)){
 }
 ```
 
-Finally, we can plot all the quality measures and computation time to find optimal `eps`.
+Finally, we can plot all the quality measures and computation time to find optimal `eps`. In Figure \@ref(fig:eps_plot), the optimal measures in the top row are the maximum, while those in the bottom row are the minimum. Therefore, we can tell form the plot that the optimal value is `r paste("eps=", quality_eps[which.max(as.data.frame(quality_eps[-1,])$lcmc), "eps"])`.
+  
 
-```{r eps_plot, echo=FALSE}
+```{r eps_plot, fig.align = 'center', out.width = "100%", echo = FALSE, fig.cap="", eval=TRUE}
 df <- tidyr::gather(as_tibble(quality_eps), key = "quality", value = "value", -eps, -K)
 p <- ggplot(df, aes(x = eps, y = value)) +
   geom_line(aes(color = quality, linetype = quality), size = 0.5) +
@@ -396,21 +414,25 @@ p <- ggplot(df, aes(x = eps, y = value)) +
 p
 ```
 
+<!-- , fig.cap="Quality measures and computation time in optimizing epsilon." -->
 
-```{r plot_optim, message=FALSE, echo=TRUE}
-# Plotting using optimal parameters
-eps_optim <- quality_eps[which.max(as.tibble(quality_eps[-1,])$lcmc), "eps"]
-sr_isomap_ann_optim <- embed(sr, "annIsomap", knn = K, eps = eps_optim, ndim = 2, get_geod = FALSE, .mute = c("message", "output"))
+```{r optim, message=FALSE, echo=TRUE, eval=TRUE}
+# Embedding using optimal parameters
+eps_optim <- quality_eps[which.max(as_tibble(quality_eps[-1,])$lcmc), "eps"]
+sr_isomap_ann_optim <- dimRed::embed(sr, "annIsomap", knn = K, eps = eps_optim, ndim = d, get_geod = FALSE)
+```
 
+```{r plot_optim, message=FALSE, echo=TRUE, out.width="100%", fig.align="center", eval=TRUE}
 par(mfrow = c(1,3))
-plot(sr, type = "2vars", main = "Swissroll data")
+plot(meta, col = cols, main = "Swissroll data")
 plot(sr_isomap, type = "2vars", main = "Exact NN")
-plot(sr_isomap_ann_optim, type = "2vars", main = paste("ANN with K=", K, "eps=", eps_optim))
+plot(sr_isomap_ann_optim, type = "2vars", 
+     main = paste("ANN with K=", K, "eps=", eps_optim))
 ```
 
 
 
-## Larger data size: N
+## Larger data size N
 
 A larger data size might show an obvious improvement with ANN. 
 
@@ -419,6 +441,7 @@ A larger data size might show an obvious improvement with ANN.
 ## More manifolds
 
 
+\newpage
 
 # Questions
     
@@ -446,7 +469,7 @@ Further, how do we reach a trade-off between computation time and quality measur
   
 5) Similar to 4), what else manifolds despite Swissroll? 
   
-```{r manifolds, fig.align='center', out.width="80%", echo=FALSE}
+```{r manifolds, fig.align='center', out.width="90%", echo=FALSE}
 # manifolds <- dataSetList()[c(1,2,4:9)]
 # par(mfrow = c(3,3))
 # for(i in 1:length(manifolds)){
