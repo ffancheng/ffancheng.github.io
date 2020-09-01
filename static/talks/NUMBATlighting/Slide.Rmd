@@ -39,48 +39,39 @@ options(htmltools.dir.version = FALSE)
 ### Manifold Learning with Approximate Nearest Neighbors
 
 .pull-left[
-<img src="docs/NUMBATS/srembedding_6.png">
-<font size="1">
+<img src="srembedding_6.png">
+<font size="2">
 .caption[
-Manifold learning embeddings for 3-D Swiss Roll data. 
+a) Manifold learning embeddings for 3-D Swiss Roll data. 
 ]
+
+<img src="nn.png">
+<font size="2">
+.caption[
+b) k-d trees for nearest neighbor searching. 
+]
+
 ]
 
 .pull-right[
-<img src="/Users/fche0019/git/mlann/docs/NUMBATS">
-<font size="1">
+<img src="ann.png">
+<font size="2">
 .caption[
-Figure from Hyndman, Liu & Pinson (2018): a 2-D representation of the electricity data from all 500 households. 
+c) $(1+\epsilon)$ approximate nearest neighbors. 
 ]
+
+<img src="quality.png">
+<font size="2">
+.caption[
+d) Isomap embedding quality against computation time using approximate nearest neighbors. 
+]
+
 ]
  
 
 
     
-.right[
-![Saw](https://fancheng.me/talks/Confirmation/manifold.gif
-) ]
 
 
 
-.pull-left[
-.center[
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Kdtree_2d.svg/800px-Kdtree_2d.svg.png" width=180, height=180>
-<font size="1">
-.caption[
-kd-tree decomposition for the point set<br/>
-(2,3), (5,4), (9,6), (4,7), (8,1), (7,2).
-]
-]
-]
-
-.pull-right[
-.center[
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Tree_0001.svg/1920px-Tree_0001.svg.png" width=350, height=200>
-<font size="1">
-.caption[
-The resulting kd-tree.
-]
-]
-]
 
