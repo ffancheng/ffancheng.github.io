@@ -32,9 +32,9 @@ hugo
 msg "Copying CNAME"
 cp CNAME public/
 
-msg "Pushing the updated \`public\` folder to the \`master\` branch"
+msg "Pushing the updated \`public\` folder to the \`gh-pages\` branch"
 pushd public
 git add *
 git commit
 popd
-git push origin master
+git push origin gh-pages

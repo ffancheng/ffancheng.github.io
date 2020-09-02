@@ -8,7 +8,8 @@ serve:
 build:
 	Rscript -e "blogdown::hugo_build()"
 
-deploy: build
+deploy: 
+	build
 	bash deploy.sh
 	
 clean:
