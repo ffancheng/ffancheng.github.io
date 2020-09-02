@@ -15,6 +15,56 @@ image:
   focal_point: ''
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>This is a post about how to build your websites.</p>
+<div id="github-setting" class="section level1">
+<h1>Github Setting</h1>
+<div id="register-for-a-github-account" class="section level2">
+<h2>Register for a Github account</h2>
+<p>If you haven’t got an Github account, please register <a href="https://github.com">here</a>.</p>
+</div>
+<div id="creat-a-new-repository" class="section level2">
+<h2>Creat a new repository</h2>
+<p>In you repository page, press the “New Repository” button on the top-right to create a new repository to run your website.</p>
+<p>Input the repo name as “USERNAME.github.io”, where the “USERNAME” is your github account name. Make sure you repo is set to be public and “Initialize with a README”.</p>
+<div class="figure">
+<img src="" alt="" />
+<p class="caption">Creating a Github repo</p>
+</div>
+</div>
+<div id="create-a-new-branch" class="section level2">
+<h2>Create a new branch</h2>
+<p>Since the Github page is deployed through the <code>master</code> branch, we need a new branch to run the source code for building the website. In the <code>branch</code> button, input <code>sources</code> and press the “Create new <code>sources</code> branch”. Then you can switch between your two branches <code>master</code> and <code>sources</code>.</p>
+</div>
+<div id="change-the-default-branch-to-sources" class="section level2">
+<h2>Change the default branch to <code>sources</code></h2>
+<p>Next to the <code>1 commit</code> in your repository, there is a <code>2 branches</code> button. Press it and you can see <code>master</code> branch is set to be your default branch. Then <code>change the default branch</code> to be your newly built <code>sources</code>. There will be windows for you to confirm your change. Please make sure <code>I understand</code>. Now if you go back to your <code>2 branches</code> page, you will see your default branch is set as <code>sources</code>.</p>
+<p>By doing this, you will later be able to create a new website in your default <code>sources</code> branch and deploy it to the <code>master</code> branch such that your Github page can be built through the <code>master</code> branch.
+## Clone your repository
+Now you need a local copy of your Github repo.</p>
+<p>First, install Git in your computer. (TODO)</p>
+<p>Second, generate and add SSH key to your Git agent. Open the terminal and generate the SSH key using</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;YOUREMAIL@gmail.com&quot;</code></pre>
+<p>During the process, you will be asked to choose a file name for your key, and <code>ENTER</code> three times would be fine. Then the key is saved as <code>/Users/USERNAME/.ssh/id_rsa</code>.</p>
+<p>Next, add the key you just generated to your Git agent using</p>
+<pre><code>eval &quot;$(ssh-agent-s)&quot;
+ssh-add -K ~/.ssh/id_rsa</code></pre>
+<p>Finally, copy the key to your Github settings. You can open the public key <code>/Users/USERNAME/.ssh/id_rsa.pub</code> with an editor and copy it, or use the command line</p>
+<pre><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
+<p>After that, go to your Github settings - SSH and GPG keys - New SSH key, and paste the key with a name you like.</p>
+<p>If you have already finished with the SSH key, you can clone the repo in your terminal using <code>git clone "https://github.com/USERNAME/USERNAME.github.io.git"</code>. Now your have a local copy of the Github repo like this.</p>
+<div class="figure">
+<img src="" alt="" />
+<p class="caption">Local Ccpy of the Github repo</p>
+</div>
+<p>If the whole process goes well, then you are all set with Github now.</p>
+</div>
+</div>
+<div id="rstudio-building" class="section level1">
+<h1>RStudio Building</h1>
+<div id="open-a-new-project" class="section level2">
+<h2>Open a new project</h2>
+</div>
+</div>
