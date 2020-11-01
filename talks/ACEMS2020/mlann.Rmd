@@ -49,13 +49,16 @@ plotly::ggplotly(p, width=600, height=400)
 
 # Manifold Learning for High-dimensional Data
 
-- Manifold learning: non-linear dimension reduction tools by preserving the local geometry structure. 
+- Manifold learning: non-linear dimension reduction tool
+*by preserving the local geometry structure*. 
+
+<!-- to extract the representation of data lying along a low-dimensional manifold embedded in the high-dimensional space -->
 
 ```{r nnembedding, fig.align = 'center', out.width = "100%", fig.cap="", echo = FALSE, message=FALSE}
 knitr::include_graphics("tod_1id1row_1id336tow.png")
 ```
 
-- But what about **8 million** household in VIC? Computation efficiency matters
+- But what about **8 million** households in VIC? Computation efficiency matters
 
 ---
 
@@ -71,12 +74,26 @@ knitr::include_graphics("tod_1id1row_1id336tow.png")
 knitr::include_graphics("ann.png")
 ```
 
+---
+
+### Manifold Learning with Approximate Nearest Neighbors
+
+- We propose to improve the efficiency by searching for approximate nearest neighbors (ANN) instead of exact ones. 
+
+- **Goal**: largely decrease the computation time without losing much accuracy (high embedding quality)
+
+- ANN methods: k-d trees, Annoy, HNSW
+
+```{r compare, fig.align = 'center', out.width = "80%", fig.cap="Comaprison of three ANN methods for four manifold learning methods. ", echo = FALSE, message=FALSE}
+knitr::include_graphics("nohnsw-1.png")
+```
+
 
 ---
 
 ## Application 1: time-of-day electricity usage patterns
 
-```{r annembedding, fig.align = 'center', out.width = "100%", fig.cap="2-d embeddings from four manifold learning methods, with the color representing half-hourly time of day. ", echo = FALSE, message=FALSE}
+```{r annembedding, fig.align = 'center', out.width = "90%", fig.cap="2-d embeddings from four manifold learning methods, with the color representing half-hourly time of day. Top panel: Exact NN. Bottom panel: ANN. ", echo = FALSE, message=FALSE}
 knitr::include_graphics("tod_compare_1id336tow.png")
 ```
 
