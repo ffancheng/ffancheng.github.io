@@ -1,5 +1,6 @@
 public
 resources
+namecheap
 *.Rproj
 .Rproj.user
 packrat/lib*/
