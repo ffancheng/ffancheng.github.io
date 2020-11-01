@@ -6,11 +6,7 @@
     <description>Recent content in admin on Fan Cheng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; {year} Fan Cheng</copyright>
-    
-	<atom:link href="https://fancheng.me/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>&amp;copy; {year} Fan Cheng</copyright><atom:link href="https://fancheng.me/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://fancheng.me/author/admin/</link>
