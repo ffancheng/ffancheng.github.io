@@ -1,92 +1,73 @@
 ---
 title: "Manifold Learning with Approximate Nearest Neighbors"
-# subtitle: "⚔<br/>with xaringan"
-author: "Fan Cheng (Monash University)"
+author: "Fan Cheng"
+# email: Fan.Cheng@monash.edu
 institute: "Rob J Hyndman (Monash University)<br/>Anastasios Panagiotelis (University of Sydney)"
-date: "Monash Data Fluency seminar `r Sys.Date()`<br/>https://fancheng.me/talks/datafluency/mlann.html"
+date: "Monash Data Fluency seminar Nov 27, 2020 <br/>https://fancheng.me/talks/datafluency/mlann.html"
 output:
   xaringan::moon_reader:
-    # lib_dir: libs
+    css:
+      - ninjutsu 
+      - "assets/animate.css"
+      - "assets/custom.css"
+      - "assets/fira-code.css"
+      - "assets/boxes.css"
+      - "assets/styles.css"
+      - "assets/monash-brand.css"
+      - "assets/table.css"
+      - "assets/github-calendar.css"
+      - "assets/github-calendar-responsive.css"
+    self_contained: false 
+    seal: false 
+    chakra: 'libs/remark-latest.min.js'
+    lib_dir: libs
+    mathjax: "assets/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    includes:
+      after_body: "assets/custom.html"
     nature:
       highlightStyle: github
+      highlightLanguage: r 
       highlightLines: true
+      highlightSpans: false 
       countIncrementalSlides: false
-      # titleSlideClass: ["right", "top", "my-title"]
-      # autoplay: 30000
-      # countdown: 60000
-      beforeInit: "macros.js"
-    yolo: false
-    seal: true
-    # css: [default, metropolis, metropolis-fonts]
-    # chakra: libs/remark-latest.min.js
+      slideNumberFormat: '%current%/%total%'
+      navigation:
+        scroll: false 
+        touch: true
+        click: false
+      ratio: '16:9'
 ---
 
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+```{r, include = FALSE}
+current_file <- knitr::current_input()
+```
+```{r titleslide, child="assets/titleslide.Rmd"}
 ```
 
 
 
-<!-- <div class="grid" style="grid: 1fr / 1.2fr 2fr;"> -->
-<!-- <div class="item white monash-bg-blue border-right"> -->
-<!-- <br> -->
-
-<!-- <div class="circle-image"> -->
-<!-- <center> -->
-<!-- <img src="images/FanCheng.png" width = "200px"/> -->
-<!-- </center> -->
-<!-- </div> -->
-
-<!-- **Fan Cheng** <br> -->
-<!-- *PhD Student in Statistics*<br> -->
-<!-- Monash University -->
-
-<!-- <br> -->
-
-<!-- <i class="fas fa-globe"></i> https://fancheng.me/ -->
-
-<!-- <i class="fas fa-envelope"></i> Fan.Cheng@monash.edu -->
-
-<!-- <i class="fab fa-twitter"></i> @fanchengfc -->
-
-<!-- </div> -->
-
-<!-- <div class="item"> -->
-
-<!-- <h1>About your helper</h1> -->
-
-<!-- <ul> -->
-<!-- <li>I am a second-year PhD student in Statistics at Monash</li> -->
-<!-- <li>I work for the Monash Data Fluency team to teach workshops on R, Python, Git and Unix</li> -->
-<!-- <li>My research project is about manifold learning based on empirical probability distributions. If you are interested, I am more than happy to talk about it :)</li> -->
-<!-- </ul> -->
-<!-- </div> -->
-
-<!-- </div> -->
-
-<!-- --- -->
-
-
+---
 # Irish Smart Meter Data
 
 - Problem of interest: electricity usage patterns of households
 
 - Half-hourly data for 535 days in 3639 households
 
-- Empirical discrete distributions: $48*7=336$ distributions for each household
+- Empirical discrete distributions: $48 \times 7=336$ distributions per household
 
-
-```{r smartmeter, fig.align = 'center', out.width = "60%", fig.cap="Two smart-meter demand examples from the Irish smart meter data set.", echo = FALSE, message=FALSE, warning=FALSE}
+```{r smartmeter, fig.align = 'center', out.width = "80%", fig.cap="Two smart-meter demand examples from the Irish smart meter data set.", echo = FALSE, message=FALSE, warning=FALSE}
 # knitr::include_graphics("smartmeter.png")
 load("smartmeter_2id.rda")
-plotly::ggplotly(p, width=600, height=400)
+library(shiny)
+div(
+  plotly::ggplotly(p, width=600, height=400),
+  align = "center")
 ```
 
 
 ---
 
-## How to estimate emprical distributions?
+# How to estimate emprical distributions?
 
 - *Objective*: to approximate the distribution of electricity demand $d_{i,t}$ for household $i$ over time period $t$
 
@@ -94,8 +75,10 @@ plotly::ggplotly(p, width=600, height=400)
 
       - Group all data over $i$ and $t$ and compute quantiles $q_{g}$ for $g=1,\dots,99$ such that 
       $$\frac{1}{NT}\sum_{i}\sum_{t}I(d_{i,t}< q_{g})=\frac{g}{100};$$
+      
       - Use quantiles as binning values for discrete approximation and compute 
       $$\pi_{i,g}=\frac{1}{T}\sum_t I(q_{g-1}<d_{i,t}<q_g);$$
+      
       - Vector $\pi_i$ represents a probability mass function over discrete bins.
       
 - Why quantiles over kernel density estimate?
@@ -113,7 +96,7 @@ class: inverse, center, middle
 
 # Manifold learning
 
-- *Manifold* -- where the data set lies on a low-dimensional Euclidean space embedded in a high-dimensional feature space
+- *Manifold*: where the data set lies on a low-dimensional Euclidean space embedded in a high-dimensional feature space
 
 - Manifold learning: non-linear dimension reduction tool
 *by preserving the local geometry structure*. 
@@ -121,7 +104,7 @@ class: inverse, center, middle
 - Manifold learning methods: Isomap, LLE, Laplacian eigenmaps, etc. 
     
 
-.right[
+.center[
 ![Saw](https://fancheng.me/talks/Confirmation/manifold.gif
 ) ]
 
@@ -141,7 +124,7 @@ to extract the representation of data lying along a low-dimensional manifold emb
     recreation during the evening (17:00 - 00:00);
     sleeping (00:00 - 08:00)
 
-```{r nnembedding, fig.align = 'center', out.width = "100%", fig.cap="", echo = FALSE, message=FALSE}
+```{r nnembedding, fig.align = 'center', out.width = "70%", fig.cap="", echo = FALSE, message=FALSE}
 knitr::include_graphics("tod_1id1row_1id336tow.png")
 ```
 
@@ -156,63 +139,68 @@ class: inverse, center, middle
 
 ---
 
-### Manifold Learning with Approximate Nearest Neighbors
+# Manifold Learning with Approximate Nearest Neighbors
 
+.pull-left[
 - We propose to improve the efficiency by searching for approximate nearest neighbors (ANN) instead of exact ones. 
 
 - **Goal**: largely decrease the computation time without losing much accuracy (high embedding quality)
 
 - ANN methods: k-d trees, Annoy, HNSW
+]
 
-```{r ann, fig.align = 'center', out.width = "70%", fig.cap="Illustration of approximate nearest neighbors compared to exact ones. ", echo = FALSE, message=FALSE}
+.pull-right[
+```{r ann, fig.align = 'center', out.width = "50%", fig.cap="Illustration of approximate nearest neighbors compared to exact ones. ", echo = FALSE, message=FALSE}
 knitr::include_graphics("ann.png")
 ```
+]
+
+
 
 ---
 
-### Manifold Learning with Approximate Nearest Neighbors
+# Manifold Learning with Approximate Nearest Neighbors
 
-- We propose to improve the efficiency by searching for approximate nearest neighbors (ANN) instead of exact ones. 
 
-- **Goal**: largely decrease the computation time without losing much accuracy (high embedding quality)
-
-<!-- - ANN methods: k-d trees, Annoy, HNSW -->
-
-```{r compare, fig.align = 'center', out.width = "90%", fig.cap="Comaprison of three ANN methods for four manifold learning methods on MNIST dataset. ", echo = FALSE, message=FALSE}
+```{r compare, fig.align = 'center', out.width = "60%", fig.cap="Comaprison of three ANN methods for four ML methods on MNIST dataset. ", echo = FALSE, message=FALSE}
 knitr::include_graphics("compareml.png")
 ```
 
+---
+class: inverse, center, middle
+
+# Application to electricity data
 
 ---
 
-### For each household: time-of-day electricity usage patterns
+# For each household: electricity usage patterns
 
-```{r annembedding, fig.align = 'center', out.width = "90%", fig.cap="2-d embeddings from four manifold learning methods, with the color representing half-hourly time of day. Top panel: Exact NN. Bottom panel: ANN. ", echo = FALSE, message=FALSE}
+```{r annembedding, fig.align = 'center', out.width = "70%", fig.cap="2-d embeddings from four manifold learning methods, with the color representing half-hourly time of day. Top panel: Exact NN. Bottom panel: ANN. ", echo = FALSE, message=FALSE}
 knitr::include_graphics("tod_compare_1id336tow.png")
 ```
 
 ---
 
-### For each household: anomaly detection for unusual time period
+# For each household: anomaly detection
 
 - High density region plots (Hyndman, 1996)
 
 - Identify the most unusual observations (*"anomalies"*) with the lowest density
 
-```{r hdr, fig.align = 'center', out.width = "80%", fig.cap="High density region plot from the Hessian LLE embeddings using exact NN (left panel) and ANN (right panel). The most typical points are shown in red, while the most anomalous are shown in black.", echo = FALSE, message=FALSE}
+```{r hdr, fig.align = 'center', out.width = "70%", fig.cap="High density region plot from the Hessian LLE embeddings using exact NN (left panel) and ANN (right panel). The most typical points are shown in red, while the most anomalous are shown in black.", echo = FALSE, message=FALSE}
 knitr::include_graphics("hdr10_comparehlle_1id336tow.png")
 ```
 
 ---
-### For all households: anomaly detection for unusual households
+# For all households: anomaly detection
 
-```{r hdrallid, fig.align = 'center', out.width = "100%", fig.cap="High density region plot for all households from the Isomap embeddings using exact NN (left panel) and ANN (right panel). ", echo = FALSE, message=FALSE}
+```{r hdrallid, fig.align = 'center', out.width = "60%", fig.cap="High density region plot for all households from the Isomap embeddings using exact NN (left panel) and ANN (right panel). ", echo = FALSE, message=FALSE}
 knitr::include_graphics("hdr10_compareIsomap_eps10_3639id_336tow_201length.png")
 ```
 
 
 ---
-class: inverse, left
+class: inverse, center, middle
 
 # How Data Fluency benefits my research?
 
@@ -242,6 +230,4 @@ Slides available at https://fancheng.me/talks/datafluency/mlann.html
 *Twitter*: [@fanchengfc](https://twitter.com/fanchengfc)
 
 ]
-
-
 
