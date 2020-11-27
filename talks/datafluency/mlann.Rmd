@@ -3,7 +3,7 @@ title: "Manifold Learning with Approximate Nearest Neighbors"
 # subtitle: "⚔<br/>with xaringan"
 author: "Fan Cheng (Monash University)"
 institute: "Rob J Hyndman (Monash University)<br/>Anastasios Panagiotelis (University of Sydney)"
-date: "Monash Data Fluency seminar `r Sys.Date()`"
+date: "Monash Data Fluency seminar `r Sys.Date()`<br/>https://fancheng.me/talks/datafluency/mlann.html"
 output:
   xaringan::moon_reader:
     # lib_dir: libs
@@ -118,15 +118,9 @@ class: inverse, center, middle
 - Manifold learning: non-linear dimension reduction tool
 *by preserving the local geometry structure*. 
 
+- Manifold learning methods: Isomap, LLE, Laplacian eigenmaps, etc. 
+    
 
-- Manifold learning methods: Isomap, LLE, Laplacian eigenmaps, etc
-    
-- Common steps: 
-    
-    - nearest neighbors finding 
-        
-    - eigendecomposition of a certain matrix
-    
 .right[
 ![Saw](https://fancheng.me/talks/Confirmation/manifold.gif
 ) ]
@@ -143,8 +137,8 @@ to extract the representation of data lying along a low-dimensional manifold emb
 
 - Three clusters roughly corresponding to three phases of a typical day
     
-    working during the day (08:00 - 17:00)
-    recreation during the evening (17:00 - 00:00)
+    working during the day (08:00 - 17:00);
+    recreation during the evening (17:00 - 00:00);
     sleeping (00:00 - 08:00)
 
 ```{r nnembedding, fig.align = 'center', out.width = "100%", fig.cap="", echo = FALSE, message=FALSE}
@@ -203,7 +197,7 @@ knitr::include_graphics("tod_compare_1id336tow.png")
 
 - High density region plots (Hyndman, 1996)
 
-- Identify the most unusual observations (*"anomalies"*) as those with the lowest density values
+- Identify the most unusual observations (*"anomalies"*) with the lowest density
 
 ```{r hdr, fig.align = 'center', out.width = "80%", fig.cap="High density region plot from the Hessian LLE embeddings using exact NN (left panel) and ANN (right panel). The most typical points are shown in red, while the most anomalous are shown in black.", echo = FALSE, message=FALSE}
 knitr::include_graphics("hdr10_comparehlle_1id336tow.png")
@@ -218,6 +212,8 @@ knitr::include_graphics("hdr10_compareIsomap_eps10_3639id_336tow_201length.png")
 
 
 ---
+class: inverse, left
+
 # How Data Fluency benefits my research?
 
 - Being an instructor keeps me busy with coding all the time
