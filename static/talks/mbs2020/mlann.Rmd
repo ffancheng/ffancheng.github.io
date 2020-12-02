@@ -73,14 +73,14 @@ div(
 
 - *Steps*: 
 
-      - Group all data over $i$ and $t$ and compute quantiles $q_{g}$ for $g=1,\dots,99$ such that 
-      $$\frac{1}{NT}\sum_{i}\sum_{t}I(d_{i,t}< q_{g})=\frac{g}{100};$$
+      - Group all data and construct an evenly spaced grid $\kappa_0,\kappa_1,\dots,\kappa_G$ of size $G=200$ with $\kappa_0=\underset{i,t}{\min} d_{i,t}$ and $\kappa_G=\underset{i,t}{\max} d_{i,t}$ as endpoints.
       
-      - Use quantiles as binning values for discrete approximation and compute 
-      $$\pi_{i,g}=\frac{1}{T}\sum_t I(q_{g-1}<d_{i,t}<q_g);$$
+      - Compute $\pi_{i,g}=(1/T)\sum_t I(\kappa_{g-1}<d_{i,t}<\kappa_g)$ where $T$ is the total number of time periods.
       
       - Vector $\pi_i$ represents a probability mass function over discrete bins.
-      
+
+???
+
 - Why quantiles over kernel density estimate?
 
     - Missing values; highly skewed data; non-negative support
@@ -205,7 +205,7 @@ class: inverse, center, middle
 
 # Thanks!
 
-Slides available at https://fancheng.me/talks/datafluency/mlann.html
+Slides available at https://fancheng.me/talks/mbs2020/mlann.html
 
 .pull-right[
 
