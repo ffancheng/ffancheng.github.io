@@ -113,7 +113,7 @@ knitr::include_graphics("images/electricity_hdrbox_3id_7dow.png")
 
 ???
 
-# How to estimate emprical distributions?
+# How to estimate empirical distributions?
 
 - *Objective*: to approximate the distribution of electricity demand $d_{i,t}$ for household $i$ over time period $t$
 
@@ -134,8 +134,6 @@ class: inverse, center, middle
 
 # Why manifold learning?
 
-<!-- ## To work with 336 distributions per household -->
-
 ---
 class: split-two
 
@@ -148,22 +146,37 @@ class: split-two
 - Manifold learning: non-linear dimension reduction tool
 *by preserving the local geometry structure*
 
-- Statistical manifold: manifold with each observation as PDFs
+- Statistical manifold: manifold with each observation as a PDF
+
+]
+
+.row[.center[
+![Saw](https://fancheng.me/talks/Confirmation/manifold.gif)
+]
+]
+
+
+---
+class: split-two
+count: false
+
+.row[
+.center.monash-bg-blue.white[
+# Manifold learning
+]
+- *Manifold*: where the data set lies on a low-dimensional subspace embedded in a high-dimensional space
+
+- Manifold learning: non-linear dimension reduction tool
+*by preserving the local geometry structure*
+
+- Statistical manifold: manifold with each observation as a PDF
 
 ]
 
 .row[
-.split-two[
-.column.center[
-![Saw](https://fancheng.me/talks/Confirmation/manifold.gif)
-]
-
-.column.center[
-```{r isoembed, fig.align = 'right', out.width = "70%", fig.cap="", echo = FALSE, message=FALSE}
-# knitr::include_graphics("images/isoembed.png")
+```{r isoembed, fig.align = 'center', out.width = "80%", fig.cap="", echo = FALSE, message=FALSE}
+knitr::include_graphics("images/sr_unroll.png")
 ```
-]
-]
 ]
 
 
@@ -186,7 +199,7 @@ to extract the representation of data lying along a low-dimensional manifold emb
 knitr::include_graphics("images/tod_1id1row_1id336tow.png")
 ```
 
-The cyclical pattern observed in the representation is indicative of the fact that low values for half hour of the day (00:00, 00:30, 01:00) are temporally proximate to high values for half hour of the day (22:30, 23:00, 23:30) and are therefore similar.
+The cyclical pattern observed in the representation is indicative of the fact that low values for half-hour of the day (00:00, 00:30, 01:00) are temporally proximate to high values for half-hour of the day (22:30, 23:00, 23:30) and are therefore similar.
 
 
 ---
@@ -236,7 +249,7 @@ knitr::include_graphics("images/ann.png")
 ???
 k-d trees is one of the classic way to find ANN.
 
-Annoy and HNSW are brought up in the recent 5 year. And they both work better than k-d trees. [ann-benchmark.com]
+Annoy and HNSW are brought up in the recent 5 years. And they both work better than k-d trees. [ann-benchmark.com]
 
 ---
 # Approximate nearest neighbors comparison
@@ -272,7 +285,7 @@ $$M_{T}(K)=1-\frac{2}{G_{K}} \sum_{i=1}^{N} \sum\limits_{\begin{subarray}{c}j \i
 
 ???
 
-with higher value indicating a higher-quality representation
+with a higher value indicating a higher-quality representation
 
 $U_K(i)$ was defined as the set of points $j$ such that $x_j$ is one of the $K$-nearest neighbors of $x_i$. 
 We now also define $V_K(i)$ as the nearest neighborhood of observation $i$ in the output space, i.e. a set of points $j$ such that $y_j$ is one of the $K$-nearest neighbors of $y_i$. 
@@ -283,7 +296,6 @@ For example, if $x_j$ is the nearest neighbor of $x_i$, then $\rho_{ij}=1$ since
 
 
 ---
-
 # MNIST embedding quality vs computation time
 
 ```{r compare, fig.align = 'center', out.width = "70%", fig.cap="Comparison of three ANN methods for four ML methods on MNIST dataset. ", echo = FALSE, message=FALSE}
@@ -294,14 +306,15 @@ knitr::include_graphics("images/compareml.png")
 class: inverse, center, middle
 
 # Application to electricity data
+
 ---
 # For all households: anomaly detection
 
-- High density region plots (Hyndman, 1996)
+- Highest density region plots (Hyndman, 1996)
 
 - Identify the most unusual observations (*"anomalies"*) with the lowest density
 
-```{r hdrallid, fig.align = 'center', out.width = "60%", fig.cap="High density region plot for all households from the Isomap and LLE embeddings", echo = FALSE, message=FALSE}
+```{r hdrallid, fig.align = 'center', out.width = "60%", fig.cap="High density region plot for all households from the Isomap and LLE embeddings.", echo = FALSE, message=FALSE}
 knitr::include_graphics("images/hdr10_compare4ml_kdtreeannoy_allids_nt50_3639id_336tow_201length.png")
 ```
 
@@ -318,7 +331,6 @@ class: inverse, center, middle
 # Anomaly detection with kernel density estimation on manifolds
 
 ---
-
 # Research question 
 
 - Manifold learning assumption: recover geometry (distances)
@@ -339,7 +351,7 @@ knitr::include_graphics("images/swissroll.png")
 ???
 - To preserve the geometry of the manifold we need to preserve distances.
 
-- World map distances between two locations are not the geometric distances.
+- World map distances between two locations are not geometric distances.
 
 - Ellipses show how the distances between points are distorted. (Circles if no distortions) Horizontally stretched out. 
 
@@ -373,7 +385,7 @@ $$\begin{aligned}
 K_{\mathbf{H}_i}(\mathbf{x}-\mathbf{x}_i)&=(2\pi)^{-d/2}|\mathbf{H}_i|^{-1/2}\exp\left[-\frac{1}{2}(\mathbf{x}-\mathbf{x}_i)'\mathbf{H}_i^{-1}(\mathbf{x}-\mathbf{x}_i)\right]
 \end{aligned}$$
 
-- In Chapter 1, the HDR plots use KDE with single $H$ matrix
+- In Chapter 1, the HDR plots use KDE with a $H$ matrix proportional to identical matrix
 
 - *Metric Learning* algorithm provides extra information for each point with a square matrix
 
@@ -427,7 +439,7 @@ In spirit, this idea follows the estimator of @Pelletier2005-vu, but the geometr
 
 
 <!-- ??? -->
-<!-- If the inner product of the tangent space [if exists] is known for a given geometry, the Riemannian metric is a good measure to recover the geometry of manifold. -->
+<!-- If the inner product of the tangent space [if exists] is known for a given geometry, the Riemannian metric is a good measure to recover the geometry of a manifold. -->
 
 <!-- A Riemannian manifold is a smooth manifold with a Riemannian metric defined at each point. -->
 
@@ -439,7 +451,6 @@ knitr::include_graphics("images/vkde.png")
 ```
 
 ---
-
 class: inverse, center, middle
 
 # Mixture model approximation in statistical manifold learning
@@ -499,9 +510,9 @@ Slides available at https://fancheng.me/talks/midcandidature/slides.html
 
 .pull-right[
 
-*Website*: [fancheng.me](https://fancheng.me)
+<!-- *Website*: [fancheng.me](https://fancheng.me) -->
 
-*Github repo*: [@ffancheng](https://github.com/ffancheng/paper-mlann)
+*Github repo*: [@ffancheng/paper-mlann](https://github.com/ffancheng/paper-mlann)
 
 <!-- *Twitter*: [@fanchengfc](https://twitter.com/fanchengfc) -->
 
