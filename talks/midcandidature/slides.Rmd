@@ -310,6 +310,8 @@ class: inverse, center, middle
 ---
 # For all households: anomaly detection
 
+- Distances between distributions
+
 - Highest density region plots (Hyndman, 1996)
 
 - Identify the most unusual observations (*"anomalies"*) with the lowest density
