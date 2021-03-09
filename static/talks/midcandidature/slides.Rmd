@@ -387,7 +387,7 @@ $$\begin{aligned}
 K_{\mathbf{H}_i}(\mathbf{x}-\mathbf{x}_i)&=(2\pi)^{-d/2}|\mathbf{H}_i|^{-1/2}\exp\left[-\frac{1}{2}(\mathbf{x}-\mathbf{x}_i)'\mathbf{H}_i^{-1}(\mathbf{x}-\mathbf{x}_i)\right]
 \end{aligned}$$
 
-- In Chapter 1, the HDR plots use KDE with a $H$ matrix proportional to identical matrix
+- In Chapter 1, the HDR plots use KDE with a $H$ matrix proportional to identity matrix
 
 - *Metric Learning* algorithm provides extra information for each point with a square matrix
 
