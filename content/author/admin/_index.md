@@ -74,10 +74,10 @@ interests = [
   icon_pack = "fab"
   link = "https://www.linkedin.com/in/fan-cheng"
 
-# [[social]]
-#   icon = "google-scholar"
-#   icon_pack = "ai"
-#   link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+[[social]]
+  icon = "google-scholar"
+  icon_pack = "ai"
+  link = "https://scholar.google.com/citations?user=DmTNz0QAAAAJ&hl=en&oi=sra"
 
 [[social]]
   icon = "orcid"
@@ -90,7 +90,7 @@ interests = [
 [[social]]
   icon = "cv"
   icon_pack = "ai"
-  link = "https://fancheng.me/FanCV"
+  link = "http://cv.fancheng.me"
 
 +++
   
