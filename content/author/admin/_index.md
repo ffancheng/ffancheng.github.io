@@ -90,9 +90,9 @@ interests = [
 [[social]]
   icon = "cv"
   icon_pack = "ai"
-  link = "http://cv.fancheng.me"
+  link = "https://cv.fancheng.me"
 
 +++
   
-Fan Cheng is a Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by \\
+I am a third-year Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by
 [Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*. 
