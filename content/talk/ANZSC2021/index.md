@@ -19,7 +19,7 @@ event = "ANZSC 2021"
 event_url = "https://anzsc2021.com.au"
 
 
-featured = true
+featured = false
 math = true
 projects = ["mlann"]
 
