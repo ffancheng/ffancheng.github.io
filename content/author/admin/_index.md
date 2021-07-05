@@ -95,4 +95,4 @@ interests = [
 +++
   
 I am a third-year Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by
-[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://research.monash.edu/en/persons/anastasios-panagiotelis). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*. 
+[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://anastasiospanagiotelis.netlify.app/). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*. 
