@@ -5,7 +5,7 @@ authors:
 - Rob J Hyndman
 - Anastasios Panagiotelis
 date: "2021-02-22"
-doi: "arXiv:2103.11773"
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
 # publishDate: "2021-01-10T00:00:00Z"
