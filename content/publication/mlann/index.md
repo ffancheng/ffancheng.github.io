@@ -1,9 +1,10 @@
+---
 title: "Manifold learning with approximate nearest neighbors"
 authors:
 - admin
 - Rob J Hyndman
 - Anastasios Panagiotelis
-date: "2021-02-22T00:00:00Z"
+date: "2021-02-22"
 doi: "10.1080/10618600.2020.1715226"
 
 # Schedule page publish date (NOT publication's date).
@@ -13,7 +14,7 @@ doi: "10.1080/10618600.2020.1715226"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-# publication_types: ["2"]
+publication_types: "3"
 
 # Publication name and optional abbreviated publication name.
 publication: ""
