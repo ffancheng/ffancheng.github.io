@@ -1,6 +1,8 @@
 # SITE SETUP
 # Documentation: https://sourcethemes.com/academic/
 
+########## Theme
+
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
 color_theme = "default"
@@ -11,39 +13,61 @@ day_night = true
 #   Choose from `default`, `classic`, or `playfair`.
 font = "default"
 
+# Choose a font size.
+# Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
+font_size = "L"
+
+
+########## Info
+
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = ""
+description = "Fan Cheng's personal website"
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = "Fancheng.png"
 
 # Twitter username (without @). Used when a vistor shares your site on Twitter.
-# twitter = "fanchengfc"
+# twitter = "fanchengfc" # hide in the contact widget
 
 # Diplay a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
 logo = "icon.png"
 
+
+########## Features
+
 # Enable global source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-# highlight_languages = ["r"]  # Add support for highlighting additional languages
+highlight_languages = ["r"]  # Add support for highlighting additional languages
 # highlight_style = "github"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable global LaTeX math rendering?
 #   If false, you can enable it locally on a per page basis.
 math = true
 
+# Enable diagram rendering? true/false
+#   If false, you can enable diagrams on a per page basis as needed.
+diagram = false
+
+# Enable visitors to edit pages?
+#   `repo` defines the repository URL. `editable` defines which page types can be edited.
+edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", repo_branch = "master", editable = {docs = true, page = false, post = false}}
+
 # Privacy pack
 #   Show a cookie consent message to visitors
 #   Anonymize IP in Google Analytics (if enabled)
 privacy_pack = false
+
+
+########## Date
 
 # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
 #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
 date_format = "Jan 2, 2006"
 #   Examples: "3:04 pm" or "15:04"
 time_format = "3:04 PM"
+
 
 ############################
 ## Contact Widget setup   ##
@@ -52,8 +76,25 @@ time_format = "3:04 PM"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "Fan.Cheng@monash.edu"
 # phone = ""
-address = "[Department of Econometrics & Business Statistics, <br/>Monash University, <br/>900 Dandenong Rd, <br/>Caulfield East VIC 3145, <br/>Australia](https://www.monash.edu/business/ebs)"
+address = "[Department of Econometrics & Business Statistics, <br/>Monash University, <br/>Clayton VIC 3168, <br/>Australia](https://www.monash.edu/business/ebs)"
 email_form = 0
+
+# For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
+# address = {street = "Menzies Building", city = "", region = "Clayton", postcode = "VIC 3168", country = "Australia", country_code = "AU"}
+
+# Geographic coordinates
+# To get your coordinates, right-click on Google Maps and click on the coordinates to copy automatically.
+coordinates = {latitude = "-37.91233247304097", longitude = "145.13262598244796"}
+
+# Directions for visitors to locate you.
+directions = ""
+
+# Office hours
+# A list of your office hours. To remove, set to an empty list `[]`.
+office_hours = []
+
+# Enter an optional link for booking appointments (e.g. calendly.com).
+appointment_url = ""
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
@@ -64,6 +105,10 @@ email_form = 0
   # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   # ]
+  
+############################
+## Map  
+############################
 
 # Display a map.
 # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -80,11 +125,11 @@ email_form = 0
 #   1: Google Maps
 #   2: OpenStreetMap (Mapnik)
 #   3: OpenStreetMap (Mapbox)
-# map = 0
-# map_api_key = ""
-# latitude = "37.4275"
-# longitude = "-122.1697"
-# zoom = 15
+map = 2
+map_api_key = ""
+latitude = "-37.91233247304097"
+longitude = "145.13262598244796"
+zoom = 15
 
 ############################
 ## Plugins                ##
@@ -103,7 +148,6 @@ plugins_js  = []
 # Get user avatars from Gravatar.com? (true/false)
 gravatar = false
 
-
 # Align the main menu to the right of the page? (true/false)
 menu_align_right = false
 
@@ -119,11 +163,14 @@ section_pager = true
 # Enable in-built social sharing buttons? (true/false)
 sharing = true
 
+# Link authors to their profile page? (true/false)
+link_authors = true
+
 # Configuration of publication pages.
 [publications]
   # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "January 2006"
+  date_format = "January 2, 2006"
 
   # Citation style ("apa" or "mla")
   citation_style = "apa"
@@ -150,6 +197,10 @@ sharing = true
   publication_view = 2
   talk_view = 2
 
+
+############################
+## Search
+############################
 # Search.
 [search]
   # Search provider:
