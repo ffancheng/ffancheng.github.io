@@ -18,10 +18,10 @@
   url = "#talk"
   weight = 30
   
-[[main]]
-  name = "Teaching"
-  url = "#teaching"
-  weight = 40
+#[[main]]
+#  name = "Teaching"
+#  url = "#teaching"
+#  weight = 40
 
 [[main]]
   name = "Blog"
@@ -31,12 +31,12 @@
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # Current CV link generated from https://github.com/ffancheng/fancv. 
-[[main]]
-   name = "CV"
-   url = "https://cv.fancheng.me"
-   weight = 60
+#[[main]]
+#   name = "CV"
+#   url = "https://cv.fancheng.me"
+#   weight = 60
    
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 70
+  weight = 60

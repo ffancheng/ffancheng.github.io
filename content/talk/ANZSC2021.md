@@ -8,7 +8,7 @@ event = "ANZSC 2021"
 event_url = "https://anzsc2021.com.au/"
 location = "Brisbane, Australia"
 
-selected = false
+selected = true
 math = false
 
 url_slides = "http://talks.fancheng.me/ANZSC2021"

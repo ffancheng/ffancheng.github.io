@@ -5,7 +5,7 @@ authors:
 - Rob J Hyndman
 - Anastasios Panagiotelis
 date: "2021-02-22"
-doi: "10.1080/10618600.2020.1715226"
+doi: "arXiv:2103.11773"
 
 # Schedule page publish date (NOT publication's date).
 # publishDate: "2021-01-10T00:00:00Z"
@@ -25,7 +25,7 @@ abstract: Manifold learning algorithms are valuable tools for the analysis of hi
 # Summary. An optional shortened abstract.
 summary: []
 
-featured: false
+featured: true
 
 # links:
 # - name: ""
@@ -40,7 +40,7 @@ url_source: ''
 url_video: ''
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
   caption: ""
   focal_point: ""
