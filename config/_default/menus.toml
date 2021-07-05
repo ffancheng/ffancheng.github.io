@@ -6,27 +6,27 @@
 [[main]]
   name = "Home"
   url = "#about"
-  weight = 10
+  weight = 1
 
 [[main]]
   name = "Projects"
-  url = "#projects"
-  weight = 20
+  url = "#project"
+  weight = 2
 
 [[main]]
   name = "Talks"
-  url = "#talks"
-  weight = 20
+  url = "#talk"
+  weight = 3
   
 [[main]]
   name = "Teaching"
-  url = "#talks"
-  weight = 20
+  url = "#teaching"
+  weight = 4
 
 [[main]]
   name = "Blog"
-  url = "#posts"
-  weight = 10
+  url = "#post"
+  weight = 5
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -34,9 +34,9 @@
 [[main]]
    name = "CV"
    url = "https://cv.fancheng.me"
-   weight = 10
+   weight = 6
    
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 10
+  weight = 7
