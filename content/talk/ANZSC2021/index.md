@@ -1,31 +1,31 @@
 +++
-title = "Manifold learning with approximate nearest neighbors"
+title = "ANZSC2021: Manifold learning with approximate nearest neighbors"
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Fan Cheng", "Rob J Hyndman", "Anastasios Panagiotelis"]
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date = 2010-06-01T13:00:00
-date_end = 2010-06-01T15:00:00
+date = 2021-07-06T14:45:00
+date_end = 2021-07-06T15:00:00
 all_day = false
 
 # Schedule page publish date (NOT talk date).
-publishDate = 2017-01-01T00:00:00
+# publishDate = 2017-01-01T00:00:00
 
 
 
 # Location of event.
-location = "London, United Kingdom"
+location = "Melbourne, Australia (Online)"
 
 # Name of event and optional event URL.
-event = "Academic Theme Conference"
-event_url = "https://example.org"
+event = "ANZSC 2021"
+event_url = "https://anzsc2021.com.au"
 
 # Abstract. What's your talk about?
 abstract = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Summary. An optional shortened abstract.
-summary = "An example talk using Academic's Markdown slides feature."
+summary = "A contributed talk at ANZSC2021 'Machine Learning' session."
 
 # Is this a featured talk? (true/false)
 featured = false
@@ -43,7 +43,7 @@ tags = []
 slides = "example"
 
 # Optional filename of your slides within your talk folder or a URL.
-url_slides = ""
+url_slides = "http://talks.fancheng.me/ANZSC2021"
 
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
@@ -51,12 +51,12 @@ url_slides = ""
 #   E.g. `projects = ["deep-learning"]` references
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = ["internal-project"]
+projects = ["mlann"]
 
 # Links (optional).
 url_pdf = ""
 url_video = ""
-url_code = ""
+url_code = "https://github.com/ffancheng/talks/tree/master/ANZSC2021"
 
 # Demo talk page uses LaTeX math.
 math = true
