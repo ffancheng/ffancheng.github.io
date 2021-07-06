@@ -25,7 +25,7 @@ event_url = "https://anzsc2021.com.au"
 abstract = ""
 
 # Summary. An optional shortened abstract.
-summary = "A talk at ANZSC2021 Machine Learning session. [*Slides link*](http://talks.fancheng.me/ANZSC2021)"
+summary = "A talk at ANZSC2021 Machine Learning session."
 
 # Is this a featured talk? (true/false)
 featured = false
