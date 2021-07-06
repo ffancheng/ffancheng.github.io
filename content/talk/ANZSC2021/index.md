@@ -12,8 +12,6 @@ all_day = false
 # Schedule page publish date (NOT talk date).
 publishDate = 2021-07-05T00:00:00
 
-
-
 # Location of event.
 location = "Melbourne, Australia (Online)"
 
@@ -51,11 +49,11 @@ url_slides = "http://talks.fancheng.me/ANZSC2021"
 #   E.g. `projects = ["deep-learning"]` references
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = ["internal-project"]
+projects = ["mlann"]
 
 # Links (optional).
 url_pdf = ""
-url_video = ""
+url_video = "https://youtu.be/8nlusizl7YI?t=4473"
 url_code = "https://github.com/ffancheng/talks/tree/master/ANZSC2021"
 
 # Demo talk page uses LaTeX math.
