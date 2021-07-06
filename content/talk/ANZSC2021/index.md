@@ -1,5 +1,5 @@
 +++
-title = "ANZSC2021: Manifold learning with approximate nearest neighbors"
+title = "Manifold learning with approximate nearest neighbors"
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Fan Cheng", "Rob J Hyndman", "Anastasios Panagiotelis"]
 
@@ -10,7 +10,7 @@ date_end = 2021-07-06T15:00:00
 all_day = false
 
 # Schedule page publish date (NOT talk date).
-# publishDate = 2017-01-01T00:00:00
+publishDate = 2021-07-05T00:00:00
 
 
 
@@ -25,7 +25,7 @@ event_url = "https://anzsc2021.com.au"
 abstract = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
 
 # Summary. An optional shortened abstract.
-summary = "A contributed talk at ANZSC2021 'Machine Learning' session."
+summary = "A talk at ANZSC2021 Machine Learning session."
 
 # Is this a featured talk? (true/false)
 featured = false
@@ -40,10 +40,10 @@ tags = []
 #   E.g. `slides = "example-slides"` references
 #   `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides = "ANZSC2021"
+slides = "example"
 
 # Optional filename of your slides within your talk folder or a URL.
-url_slides = "http://talks.fancheng.me/ANZSC2021"
+url_slides = ""
 
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
@@ -51,12 +51,12 @@ url_slides = "http://talks.fancheng.me/ANZSC2021"
 #   E.g. `projects = ["deep-learning"]` references
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = ["mlann"]
+projects = ["internal-project"]
 
 # Links (optional).
 url_pdf = ""
 url_video = ""
-url_code = "https://github.com/ffancheng/talks/tree/master/ANZSC2021"
+url_code = ""
 
 # Demo talk page uses LaTeX math.
 math = true
