@@ -85,7 +85,7 @@ user_groups = [{ name = "NUMBATs", url = "https://numbat.space" },
   icon_pack = "ai"
   link = "https://orcid.org/0000-0003-0009-3262"
 
-CV already added as a widget in config/menus.toml.
+# CV already added as a widget in config/menus.toml.
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 [[social]]
