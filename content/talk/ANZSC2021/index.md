@@ -25,7 +25,7 @@ event_url = "https://anzsc2021.com.au"
 abstract = ""
 
 # Summary. An optional shortened abstract.
-summary = "A talk at ANZSC2021 Machine Learning session."
+summary = "A talk at ANZSC2021 Machine Learning session. [*Slides link*](http://talks.fancheng.me/ANZSC2021)"
 
 # Is this a featured talk? (true/false)
 featured = false
@@ -40,7 +40,7 @@ tags = []
 #   E.g. `slides = "example-slides"` references
 #   `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides = "example"
+slides = ""
 
 # Optional filename of your slides within your talk folder or a URL.
 url_slides = "http://talks.fancheng.me/ANZSC2021"
@@ -76,3 +76,5 @@ math = true
 {{% alert note %}}
 Click on the **Slides** button above to view the built-in slides feature.
 {{% /alert %}}
+
+Please find the slides link [**here**](http://talks.fancheng.me/ANZSC2021).
