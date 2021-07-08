@@ -13,7 +13,7 @@ all_day = false
 publishDate = 2021-07-05T00:00:00
 
 # Location of event.
-location = "Melbourne, Australia (Online)"
+location = "Gold Coast, Australia (Online)"
 
 # Name of event and optional event URL.
 event = "ANZSC 2021"
@@ -49,7 +49,7 @@ url_slides = "http://talks.fancheng.me/ANZSC2021"
 #   E.g. `projects = ["deep-learning"]` references
 #   `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects = ["mlann"]
+# projects = ["mlann"]
 
 # Links (optional).
 url_pdf = ""
