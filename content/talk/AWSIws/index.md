@@ -1,29 +1,29 @@
 +++
-title = "Australian Statistical Society and New Zealand Statistical Association Conference 2021"
+title = "Australian Mathematical Sciences Institute (AMSI) Winter School 2021"
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Fan Cheng", "Rob J Hyndman", "Anastasios Panagiotelis"]
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date = 2021-07-06T14:45:00
-date_end = 2021-07-06T15:00:00
+date = 2021-07-16T10:30:00
+date_end = 2021-07-16T10:45:00
 all_day = false
 
 # Schedule page publish date (NOT talk date).
-publishDate = 2021-07-05T00:00:00
+publishDate = 2021-07-16T00:00:00
 
 # Location of event.
-location = "Gold Coast, Australia (Online)"
+location = "Virtual Event Hosted By Queensland University of Technology"
 
 # Name of event and optional event URL.
-event = "ANZSC 2021"
-event_url = "https://anzsc2021.com.au"
+event = "AMSI Winter School 2021"
+event_url = "https://ws.amsi.org.au/"
 
 # Abstract. What's your talk about?
 abstract = ""
 
 # Summary. An optional shortened abstract.
-summary = "A talk at ANZSC2021 Machine Learning session about manifold learning with approximate nearest neighbors."
+summary = "A participant's talk at AMSI winter school 2021."
 
 # Is this a featured talk? (true/false)
 featured = false
@@ -41,7 +41,7 @@ tags = []
 slides = ""
 
 # Optional filename of your slides within your talk folder or a URL.
-url_slides = "http://talks.fancheng.me/ANZSC2021"
+url_slides = "http://talks.fancheng.me/AMSIws"
 
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
@@ -53,8 +53,8 @@ url_slides = "http://talks.fancheng.me/ANZSC2021"
 
 # Links (optional).
 url_pdf = ""
-url_video = "https://youtu.be/8nlusizl7YI?t=4473"
-url_code = "https://github.com/ffancheng/talks/tree/master/ANZSC2021"
+url_video = ""
+url_code = "https://github.com/ffancheng/talks/tree/master/AMSIws"
 
 # Demo talk page uses LaTeX math.
 math = true
@@ -75,4 +75,4 @@ math = true
 Click on the **Slides** button above to view the built-in slides feature.
 {{% /alert %}}
 
-Please find the slides link [**here**](http://talks.fancheng.me/ANZSC2021).
+Please find the slides link [**here**](http://talks.fancheng.me/AMSIws).
