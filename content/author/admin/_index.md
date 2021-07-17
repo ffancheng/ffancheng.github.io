@@ -24,8 +24,10 @@ email = "Fan.Cheng@monash.edu"
 # List (academic) interests or hobbies
 interests = [
   "Manifold Learning",
+  "Dimension Reduction",
   "Time Series Analysis",
-  "Statistical Computing"
+  "Statistical Computing",
+  "Anomaly Detection"
 ]
 
 # Organizational groups that you belong to (for People widget)
@@ -88,12 +90,12 @@ user_groups = [{ name = "NUMBATs", url = "https://numbat.space" },
 # CV already added as a widget in config/menus.toml.
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-[[social]]
-  icon = "cv"
-  icon_pack = "ai"
-  link = "https://cv.fancheng.me"
+# [[social]]
+#   icon = "cv"
+#   icon_pack = "ai"
+#   link = "https://cv.fancheng.me"
 
 +++
 
 I am a third-year Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by
-[Rob J Hyndman](https://robjhyndman.com) and [Anastasios Panagiotelis](https://anastasiospanagiotelis.netlify.app/). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*.
+[Professor Rob J Hyndman](https://robjhyndman.com) and [Associate Professor Anastasios Panagiotelis](https://anastasiospanagiotelis.netlify.app/). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*.
