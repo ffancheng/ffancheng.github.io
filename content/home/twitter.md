@@ -5,5 +5,4 @@ active = true  # Activate this widget? true/false
 weight = 110  # Order that this section will appear in.
 +++
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <a class="twitter-timeline" height='50%' max-width='200px' data-tweet-limit=3 data-theme="light" data-chrome="nofooter transparent noheader transparent noborders noscrollbar"  href="https://twitter.com/fanchengfc?ref_src=twsrc%5Etfw">Tweets by @fanchengfc</a>
+<a class="twitter-timeline" data-height="400" href="https://twitter.com/fanchengfc?ref_src=twsrc%5Etfw">Tweets by @fanchengfc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
