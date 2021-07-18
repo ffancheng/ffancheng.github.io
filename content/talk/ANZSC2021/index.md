@@ -1,7 +1,7 @@
 +++
 title = "Australian Statistical Society and New Zealand Statistical Association Conference 2021"
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Fan Cheng", "Rob J Hyndman", "Anastasios Panagiotelis"]
+authors = ["Fan Cheng"]
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
