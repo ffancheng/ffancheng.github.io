@@ -1,11 +1,11 @@
 +++
-# Teaching widget.
+# Experience widget.
 widget = "teaching"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 6  # Order that this section will appear.
+weight = 80  # Order that this section will appear.
 
-title = "Teaching"
+title = "Tutor"
 subtitle = ""
 
 # Date format for experience
@@ -24,9 +24,7 @@ date_format = "Jan 2006"
   location = "Melbourne, Australia"
   date_start = "2021-07-26"
   date_end = ""
-  description = """
-  Tutor
-  """
+  description = ""
 [[experience]]
   title = "[**ETC5513 Collaborative and reproducible practices**](https://handbook.monash.edu/2021/units/ETC5513?year=2021)"
   company = "Monash University"
@@ -34,17 +32,13 @@ date_format = "Jan 2006"
   location = "Melbourne, Australia"
   date_start = "2021-03-01"
   date_end = ""
-  description = """
-  Tutor
-  """
+  description = ""
 [[experience]]
   title = "[**ETF3500/ETF5500 High Dimensional Data Analysis**](https://anastasiospanagiotelis.netlify.app/teaching/hdda/)"
   company = "Monash University"
   company_url = ""
   location = "Melbourne, Australia"
-  date_start = "2021-08-03"
+  date_start = "2020-08-03"
   date_end = ""
-  description = """
-  Tutor
-  """
+  description = ""
 +++
