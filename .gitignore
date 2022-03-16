@@ -6,3 +6,5 @@ namecheap
 packrat/lib*/
 .Rprofile
 .gitkeep
+
+.hugo_build.lock
