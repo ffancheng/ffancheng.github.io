@@ -17,7 +17,7 @@
   weight = 20
   
 [[main]]
-  name = "Publications"
+  name = "Preprints"
   url = "#featured"
   weight = 30
 
