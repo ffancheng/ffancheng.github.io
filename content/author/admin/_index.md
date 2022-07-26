@@ -97,5 +97,5 @@ user_groups = [{ name = "NUMBATs", url = "https://numbat.space" },
 
 +++
 
-I am a third-year Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by
-[Professor Rob J Hyndman](https://robjhyndman.com) and [Associate Professor Anastasios Panagiotelis](https://anastasiospanagiotelis.netlify.app/). My research interests include manifold learning, time series analysis, and statistical computing. I am currently working on a project about *Manifold learning on empirical probability distributions*.
+I am a final-year Ph.D. student in Statistics at [Monash University](https://monash.edu), supervised by
+[Professor Rob J Hyndman](https://robjhyndman.com) and [Associate Professor Anastasios Panagiotelis](https://anastasiospanagiotelis.netlify.app/). My research interests include manifold learning, dimension reduction, time series analysis, statistical computing, and anomaly detection. I am currently working on a project about *Manifold learning on empirical probability distributions*.
