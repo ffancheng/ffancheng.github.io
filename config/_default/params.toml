@@ -84,7 +84,7 @@ email_form = 0
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and click on the coordinates to copy automatically.
-coordinates = {latitude = "-37.91233247304097", longitude = "145.13262598244796"}
+coordinates = {latitude = "-37.91395618595514", longitude = "145.1341070981025"}
 
 # Directions for visitors to locate you.
 directions = ""
@@ -127,8 +127,8 @@ appointment_url = ""
 #   3: OpenStreetMap (Mapbox)
 map = 2
 map_api_key = ""
-latitude = "-37.91233247304097"
-longitude = "145.13262598244796"
+latitude = "-37.91395618595514"
+longitude = "145.1341070981025"
 zoom = 15
 
 ############################
