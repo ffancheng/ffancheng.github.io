@@ -27,6 +27,7 @@ googleAnalytics = "UA-139427263-1"
 
 # Name of Academic theme folder in `themes/`.
 theme = "hugo-academic"
+# theme = "ananke"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
