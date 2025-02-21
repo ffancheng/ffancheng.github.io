@@ -1,1 +1,1 @@
-Source codes for my personal website https://fancheng.me.
+Source codes for my personal website.
